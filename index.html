@@ -1,0 +1,1477 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <!-- icons links start -->
+    <link
+      rel="stylesheet"
+      href="https://cdn.jsdelivr.net/npm/bootstrap-icons/font/bootstrap-icons.css"
+    />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css"
+      integrity="sha512-Evv84Mr4kqVGRNSgIGL/F/aIDqQb7xQ2vcrdIwxfjThSH8CSR7PBEakCr51Ck+w+/U6swU2Im1vVX0SVk9ABhg=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    />
+    <script
+      src="https://kit.fontawesome.com/YOUR_KIT_CODE.js"
+      crossorigin="anonymous"
+    ></script>
+    <!-- icons links start -->
+    <script src="https://cdn.tailwindcss.com?plugins=forms,typography,aspect-ratio,line-clamp"></script>
+    <link rel="stylesheet" href="/asset/css/style.css" />
+    <title>Xoblack social home page</title>
+  </head>
+  <body>
+    <!-- NAV STARTS HERE -->
+    <nav
+      class="md:sticky z-50 top-0 w-full flex flex-col md:flex-row justify-between items-center md:px-[24px] p-4 bg-white text-white md:h-20"
+    >
+      <div class="flex items-center justify-between w-full md:w-auto">
+        <img src="/asset/images/logo.png" alt="logo" class="w-20 h-10" />
+        <button class="md:hidden text-black" id="nav-toggle">
+          <i class="fa-solid fa-bars"></i>
+        </button>
+      </div>
+      <div
+        class="input w-full md:w-2/5 h-10 flex items-center mt-4 md:mt-0 relative"
+      >
+        <img
+          class="h-4 w-4 absolute left-3"
+          src="/asset/images/search-01.png"
+          alt="search icon"
+        />
+        <input
+          type="text"
+          placeholder="Search"
+          class="border-[1px] border-gray-300 p-2 pl-10 rounded-3xl focus:border-gray-500 w-full focus:outline-none focus:ring-0 text-gray-500"
+        />
+      </div>
+      <div
+        class="flex flex-col md:flex-row lg:items-center w-full md:w-auto mt-4 md:mt-0 hidden md:flex"
+        id="nav-content"
+      >
+        <a
+          onclick="window.location.href='create-post-main.html?openModal1=true'"
+          class="btn mb-4 md:mb-0 md:mr-4 hover:bg-white hover:text-green-500 border-green-500 border-[1px] bg-green-500 text-white px-3 py-2 rounded-3xl text-sm flex items-center transition duration-200 group"
+        >
+          <i
+            class="fa-solid fa-plus h-4 w-4 mr-2 text-white transition duration-200 group-hover:text-green-500"
+          ></i>
+          <span class="transition duration-200 group-hover:text-green-500"
+            >Create Post</span
+          >
+        </a>
+
+        <div
+          class="flex items-center border-l-[1px] border-gray-500 w-full md:w-auto h-5"
+        >
+          <img
+            class="h-9 w-9 rounded-full p-1 ml-0 md:ml-8"
+            src="/asset/images/nav-icon-image-girl.png"
+            alt=""
+          />
+          <div class="flex items-center justify-center ml-4 md:ml-0">
+            <div>
+              <h3 class="text-black font-bold text-xs">Taylor Hill</h3>
+              <p class="text-gray-700 text-xs">taylorh77</p>
+            </div>
+            <div class="relative">
+              <!-- Dropdown Button -->
+              <button id="dropdownButton" class="text-black p-2 py-2">
+                <i class="fa-solid fa-chevron-down"></i>
+              </button>
+
+              <!-- Dropdown Menu -->
+              <div
+                id="dropdownMenu"
+                class="hidden absolute left-0 mt-2 w-24 text-white rounded-md shadow-lg bg-black flex flex-col justify-center items-center overflow-hidden z-50"
+              >
+                <a
+                  href="#"
+                  class="block py-2 hover:bg-gray-700 w-[100%] flex items-center justify-center"
+                  >Option 1</a
+                >
+                <a
+                  href="#"
+                  class="block py-2 hover:bg-gray-700 w-[100%] flex items-center justify-center"
+                  >Option 2</a
+                >
+                <a
+                  href="#"
+                  class="block py-2 hover:bg-gray-700 w-[100%] flex items-center justify-center"
+                  >Option 3</a
+                >
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </nav>
+
+    <!-- NAV ENDS HERE -->
+    <!-- MAIN SECTION STARTS HERE  -->
+    <main
+      class="md:fixed top-20 flex flex-col md:flex-row overflow-y-auto scrollbar-hidden"
+    >
+      <!-- Toggle Button (Visible on Small Screens) -->
+
+      <!-- LEFT SIDE BAR STARTS HERE  -->
+
+      <!-- Sidebar for Medium and Larger Screens -->
+      <div
+        class="md:fixed top-20 left-0 w-[22.5%] overflow-y-auto scrollbar-hidden hidden md:flex md:w-[22.5%] bg-white border-t border-gray-300 h-screen p-4 flex-col"
+      >
+        <div class="flex flex-col gap-4">
+          <a
+            href="index.html"
+            class="flex items-center gap-3 py-2 hover:bg-black hover:text-white rounded-md px-4 group"
+          >
+            <img
+              class="h-5 w-5 invert group-hover:invert-0 transition-transform duration-300"
+              src="/asset/images/home-icon.png"
+              alt="home"
+            />
+            <span class="hidden md:inline text-gray-600 group-hover:text-white"
+              >Home</span
+            >
+          </a>
+          <a
+            href="#"
+            class="flex items-center gap-3 py-2 hover:bg-black hover:text-white rounded-md px-4 group"
+          >
+            <i class="fa-solid fa-message text-gray-600 invert"></i>
+            <span class="hidden md:inline text-gray-600 group-hover:text-white"
+              >Messages</span
+            >
+          </a>
+          <a
+            href="#"
+            class="flex items-center gap-3 py-2 hover:bg-black hover:text-white rounded-md px-4 group"
+          >
+            <img
+              class="h-5 w-5 invert"
+              src="/asset/images/Quickie.png"
+              alt="Quickies"
+            />
+            <span class="hidden md:inline text-gray-600 group-hover:text-white"
+              >Quickies</span
+            >
+          </a>
+          <a
+            href="#"
+            class="flex items-center gap-3 py-2 hover:bg-black hover:text-white rounded-md px-4 group"
+          >
+            <i
+              class="bi bi-grid-fill"
+              style="font-size: 24px; color: rgb(199, 188, 188)"
+            ></i>
+            <span class="hidden md:inline text-gray-600 group-hover:text-white"
+              >HUB</span
+            >
+          </a>
+          <a
+            href="/notification.html"
+            class="flex items-center gap-3 py-2 hover:bg-black hover:text-white rounded-md px-4 group"
+          >
+            <i class="fa-solid fa-bell text-2xl text-gray-400"></i>
+            <span class="hidden md:inline text-gray-600 group-hover:text-white"
+              >Notifications</span
+            >
+          </a>
+          <a
+            href="/profile.html"
+            class="flex items-center gap-3 py-2 hover:bg-black hover:text-white rounded-md px-4 group"
+          >
+            <img
+              class="h-5 w-5"
+              src="/asset/images/nav-icon-image-girl.png"
+              alt="Profile"
+            />
+            <span class="hidden md:inline text-gray-600 group-hover:text-white"
+              >Profile</span
+            >
+          </a>
+        </div>
+
+        <!-- Others Section -->
+        <div class="mt-4 flex flex-col gap-4">
+          <p class="text-gray-500 text-xs font-bold px-4">Others</p>
+          <a
+            href="#"
+            class="flex items-center gap-3 py-2 hover:bg-black hover:text-white rounded-md px-4 group"
+          >
+            <i class="fa-solid fa-bookmark text-xl text-gray-300"></i>
+            <span class="hidden md:inline text-gray-600 group-hover:text-white"
+              >Bookmark</span
+            >
+          </a>
+          <a
+            href="#"
+            class="flex items-center gap-3 py-2 hover:bg-black hover:text-white rounded-md px-4 group"
+          >
+            <i class="fa-solid fa-gear text-xl text-gray-300"></i>
+            <span class="hidden md:inline text-gray-600 group-hover:text-white"
+              >Settings</span
+            >
+          </a>
+          <a
+            href="#"
+            class="flex items-center gap-3 py-2 hover:bg-black hover:text-white rounded-md px-4 group"
+          >
+            <i
+              class="fa-solid fa-question text-xs text-white border-gray-300 p-1 px-2 bg-gray-300 rounded"
+            ></i>
+            <span class="hidden md:inline text-gray-600 group-hover:text-white"
+              >Help</span
+            >
+          </a>
+        </div>
+        <!-- ################################ FOOTER STARTS HERE ##################### -->
+        <footer class="text-gray-400 text-center mb-20 mt-48 block lg:block">
+          <div class="flex justify-center flex-wrap text-sm mb-4 gap-2">
+            <a href="#" class="hover:text-gray-600 text-xs">About</a>
+            <span> |</span>
+            <a href="#" class="hover:text-gray-600 text-xs"
+              >Terms & Condition</a
+            >
+            <span> |</span>
+            <a href="#" class="hover:text-gray-600 text-xs">Privacy Policy</a>
+            <span> |</span>
+            <a href="#" class="hover:text-gray-600 text-xs">Contact</a>
+          </div>
+
+          <div class="flex justify-center space-x-6 mb-2">
+            <a href="#"
+              ><i
+                class="fa-brands fa-instagram text-2xl px-1 p-[2px] hover:bg-gray-800 rounded-lg"
+              ></i
+            ></a>
+            <a href="#"
+              ><i
+                class="fa-solid fa-x text-2xl px-1 p-[2px] hover:bg-gray-800 rounded-lg"
+              ></i
+            ></a>
+            <a href="#"
+              ><i
+                class="fa-brands fa-facebook text-2xl px-1 p-[2px] hover:bg-gray-800 rounded-lg"
+              ></i
+            ></a>
+            <a href="#"
+              ><i
+                class="fa-brands fa-youtube text-2xl px-1 p-[2px] hover:bg-gray-800 rounded-lg"
+              ></i
+            ></a>
+          </div>
+          <!-- DOWNLOAD APP AND PLAY STORE BUTTONS START -->
+          <div class="flex justify-center space-x-2">
+            <!-- App Store Button -->
+            <a href="https://apps.apple.com/" target="_blank">
+              <img
+                src="https://developer.apple.com/assets/elements/badges/download-on-the-app-store.svg"
+                alt="Download on the App Store"
+                class="h-10 w-auto"
+              />
+            </a>
+
+            <!-- Google Play Button -->
+            <a href="https://play.google.com/store" target="_blank">
+              <img
+                src="https://upload.wikimedia.org/wikipedia/commons/7/78/Google_Play_Store_badge_EN.svg"
+                alt="Get it on Google Play"
+                class="h-10 w-auto"
+              />
+            </a>
+          </div>
+          <!-- DOWNLOAD APP AND PLAY STORE BUTTONS END -->
+          <p class="text-[9px] mt-2">
+            &copy; 2024 XO Black. All rights reserved.
+          </p>
+        </footer>
+      </div>
+
+      <!-- Bottom Navigation for Small Screens -->
+      <div
+        class="md:hidden fixed bottom-0 left-0 right-0 bg-black p-3 flex justify-around items-center border-t border-gray-700 z-50"
+      >
+        <a href="#" class="flex flex-col items-center text-white">
+          <img class="h-6 w-6" src="/asset/images/home-icon.png" alt="Home" />
+        </a>
+        <a href="#" class="flex flex-col items-center text-white">
+          <i class="fa-solid fa-message text-xl"></i>
+        </a>
+
+        <a
+          href="/notification.html"
+          class="flex flex-col items-center text-white"
+        >
+          <img
+            class="h-6 w-6 invert"
+            src="/asset/images/notification-03.png"
+            alt="Notifications"
+          />
+        </a>
+
+        <a href="#" class="flex flex-col items-center text-white">
+          <img
+            class="h-6 w-6 invert"
+            src="/asset/images/setting-07.png"
+            alt="Settings"
+          />
+        </a>
+
+        <a href="/profile.html" class="flex flex-col items-center text-white">
+          <img
+            class="h-6 w-6"
+            src="/asset/images/nav-icon-image-girl.png"
+            alt="Profile"
+          />
+        </a>
+
+        <!-- FontAwesome for Icons -->
+        <script
+          src="https://kit.fontawesome.com/YOUR_KIT_CODE.js"
+          crossorigin="anonymous"
+        ></script>
+
+        <!-- ################################ FOOTER ENDS HERE ##################### -->
+        <!-- ########## LEFT ENDS START ######## -->
+      </div>
+      <!-- LEFT SIDE BAR ENDS HERE  -->
+
+      <!--  MIDDLE SECTION STARTS HERE  -->
+      <div
+        class="flex-1 md:ml-[22.5%] md:mr-[28.5%] mb-20 overflow-y-auto w-full md:w-[49%] bg-white border-[1px] border-gray-300 h-screen flex flex-col items-center overflow-y-auto scrollbar-hidden"
+      >
+        <!-- LINKS DIV STARTS HERE  -->
+        <div
+          class="flex items-center justify-center h-auto w-full border-b border-gray-300"
+        >
+          <div
+            class="w-full max-w-screen-lg overflow-x-auto scrollbar-hide md:mt-3 md:mb-3 flex items-center justify-center"
+          >
+            <div
+              class="flex items-center overflow-x-auto scrollbar-hide max-h-64 justify-evenly my-2 h-[60%] md:w-[80%] border bg-gray-100 border-gray-300 rounded-full gap-[1px] py-2"
+            >
+              <a
+                href="#"
+                class="font-semibold text-gray-500 py-2 px-3 hover:bg-white hover:text-black rounded-full transition duration-300"
+              >
+                Connections
+              </a>
+              <a
+                href="#"
+                class="font-semibold text-gray-500 py-2 px-3 hover:bg-white hover:text-black rounded-full transition duration-300"
+              >
+                ForYou
+              </a>
+              <a
+                href="#"
+                class="font-semibold text-gray-500 py-2 px-3 hover:bg-white hover:text-black rounded-full transition duration-300"
+              >
+                Favorite
+              </a>
+              <a
+                href="#"
+                class="font-semibold text-gray-500 py-2 px-3 hover:bg-white hover:text-black rounded-full transition duration-300"
+              >
+                News
+              </a>
+            </div>
+          </div>
+        </div>
+        <!-- LINKS DIV ENDS HERE  -->
+        <!-- @@@@@@@@@@@@@@@@@@@@@ MAIN SECTION STARTS HERE @@@@@@@@@@@@@@@@@@@@@@@@@@@@ -->
+        <div
+          class="flex flex-col items-center mt-4 w-[90%] border-b-[1px] border-t-[1px] mb-5"
+        >
+          <div class="flex justify-between items-end w-[100%] mt-3">
+            <div class="flex flex-col">
+              <h1 class="font-semibold">Timeline</h1>
+              <div class="flex justify-start items-center gap-1 mt-3">
+                <img
+                  src="/asset/images/rtab-right-image-boy-icon.png"
+                  class="w-8 h-8 rounded-full"
+                />
+                <h2>fakhrinaufal</h2>
+                <img src="/asset/images/tree-icon.png" class="w-4 h-4" alt="" />
+                <p class="text-gray-300 text-xs md:text-sm">6m ago</p>
+              </div>
+            </div>
+            <div class="rounded-full border-[1px] p-2 flex items-end">
+              <i class="fa-solid fa-ellipsis"></i>
+            </div>
+          </div>
+          <p class="text-xs md:text-sm">
+            Just hit 3,000+ followers on X! Thanks for being here and letting me
+            share my work with you.
+          </p>
+          <img
+            src="/asset/images/hero-first-image.png"
+            class="h-auto md-[400px] w-full object-cover"
+            alt=""
+          />
+          <div class="flex items-start justify-start w-full mt-2">
+            <div
+              class="flex items-center space-x-2 px-2 rounded-full bg-gray-50"
+            >
+              <!-- Profile Images -->
+              <div class="flex -space-x-2">
+                <img
+                  src="/asset/images/rtab-right-image-boy-icon.png"
+                  alt="User 1"
+                  class="w-6 h-6 rounded-full border-2 border-white hover:translate-y-[-4px] transition-transform duration-300 ease-out"
+                />
+                <img
+                  src="/asset/images/girl-image-right-f.png"
+                  alt="User 2"
+                  class="w-6 h-6 rounded-full border-2 border-white hover:translate-y-[-4px] transition-transform duration-300 ease-out"
+                />
+                <img
+                  src="/asset/images/imageicon-boy-centersection.png"
+                  alt="User 3"
+                  class="w-6 h-6 rounded-full border-2 border-white hover:translate-y-[-4px] transition-transform duration-300 ease-out"
+                />
+              </div>
+
+              <!-- Like text -->
+              <p class="text-sm text-gray-700">
+                Liked by <span class="font-bold">kriibooo</span> and
+                <span class="font-bold">10 others</span>
+              </p>
+            </div>
+          </div>
+          <div
+            class="flex items-center justify-between space-x-3 w-[95%] mt-2 mb-3"
+          >
+            <div class="flex space-x-3">
+              <!-- Like Button 1 -->
+              <div
+                class="likeButton flex items-center space-x-1 bg-gray-50 px-4 py-2 rounded-full shadow-sm hover:bg-gray-200 transition duration-300 cursor-pointer"
+              >
+                <i class="fa-solid fa-heart text-gray-500"></i>
+                <span class="likeCount text-gray-500 text-sm font-medium"
+                  >123</span
+                >
+              </div>
+              <!-- Repost Button -->
+              <div
+                class="repostButton flex items-center space-x-1 bg-gray-50 px-4 py-2 rounded-full shadow-sm hover:bg-gray-200 transition duration-300 cursor-pointer"
+              >
+                <i class="fa-solid fa-repeat text-gray-500"></i>
+                <span class="repostCount text-gray-500 text-sm font-medium"
+                  >999</span
+                >
+              </div>
+              <!-- Share Button 3 -->
+              <div
+                class="shareButton flex items-center space-x-1 bg-gray-50 px-4 py-2 rounded-full shadow-sm hover:bg-gray-200 transition duration-300 cursor-pointer"
+              >
+                <i class="fa-solid fa-square-arrow-up-right text-gray-500"></i>
+                <span class="shareCount text-gray-500 text-sm font-medium"
+                  >999</span
+                >
+              </div>
+            </div>
+            <div class="save">
+              <!-- Save Button 3 -->
+              <div
+                class="saveButton flex items-center bg-gray-50 px-4 py-2 mb-2 rounded-full shadow-sm hover:bg-gray-200 transition duration-300 cursor-pointer"
+              >
+                <i class="fa-solid fa-bookmark text-gray-500"></i>
+              </div>
+            </div>
+          </div>
+          <div class="flex flex-col justify-start w-full">
+            <p class="text-sm text-gray-400">See all 7 comments</p>
+            <p class="text-xs font-semibold">
+              alenamakarov <span class="text-sm"> Lets goo!</span>
+            </p>
+            <div class="flex items-center gap-2">
+              <img
+                src="/asset/images/nav-icon-image-girl.png"
+                class="h-6 w-6 rounded-full"
+                alt=""
+              />
+              <!-- text area with btn start -->
+              <div class="relative w-full mt-3">
+                <textarea
+                  class="commentBox text-sm w-full p-2 border rounded-lg focus:ring-1 focus:ring-gray-500 focus:border-gray-500 resize-none overflow-hidden"
+                  placeholder="Add a comment..."
+                  rows="1"
+                ></textarea>
+                <button
+                  class="sendButton absolute right-3 top-1/2 transform -translate-y-1/2 text-blue-500 hidden"
+                >
+                  <i class="fa-solid fa-paper-plane"></i>
+                </button>
+              </div>
+              <!-- text area with btn end -->
+            </div>
+          </div>
+          <!-- FIRST SECTION ENDS HERE -->
+          <!-- ######################### SECOND CONNECTIONS SECTION STARTS HERE ####################### -->
+          <div
+            class="w-[100%] mx-auto border-b-[1px] border-t-[1px] border-gray-300 mt-2 p-4"
+          >
+            <!-- Header -->
+            <div class="flex justify-between items-center mb-4 mt-2">
+              <h2 class="text-lg font-semibold">Suggestion for you</h2>
+              <a href="#" class="text-sm text-gray-500 hover:underline"
+                >See all</a
+              >
+            </div>
+
+            <!-- Card Container -->
+            <div class="grid grid-cols-1 sm:grid-cols-3 md:grid-cols-3 gap-4">
+              <!-- Card 1 -->
+              <div
+                class="relative w-full h-50 rounded-2xl overflow-hidden shadow-lg"
+              >
+                <!-- Profile Image -->
+                <img
+                  src="/asset/images/justin-drew-card-image.png"
+                  alt="Profile"
+                  class="w-full h-full object-cover"
+                />
+
+                <!-- User Details (Absolute Position) -->
+                <div class="absolute bottom-2 left-1 w-full text-white px-3">
+                  <h3 class="text-xs font-semibold">Justin Drew</h3>
+                  <div
+                    class="flex items-center space-x-2 text-gray-300 text-xs"
+                  >
+                    <img
+                      src="/asset/images/justin-drew.png"
+                      class="w-6 h-6 rounded-full border border-white"
+                    />
+                    <span class="text-xs">justin_drew</span>
+                  </div>
+                  <button
+                    class="mt-2 w-full bg-white text-black rounded-full py-1 text-xs font-medium hover:bg-black hover:text-white"
+                  >
+                    Connect
+                  </button>
+                </div>
+              </div>
+
+              <!-- Card 2 -->
+              <div
+                class="relative w-full h-58 rounded-2xl overflow-hidden shadow-lg"
+              >
+                <!-- Profile Image -->
+                <img
+                  src="/asset/images/john doe-card-image.png"
+                  alt="Profile"
+                  class="w-full h-full object-cover"
+                />
+
+                <!-- User Details (Absolute Position) -->
+                <div class="absolute bottom-2 left-1 text-white px-3 w-full">
+                  <h3 class="text-xs font-semibold">JOhn Doe</h3>
+                  <div
+                    class="flex items-center space-x-2 text-gray-300 text-xs"
+                  >
+                    <img
+                      src="/asset/images/john-doe.png"
+                      class="w-6 h-6 rounded-full border border-white"
+                    />
+                    <span class="text-xs">John Doe</span>
+                  </div>
+                  <button
+                    class="mt-2 w-full bg-white text-black rounded-full text-xs py-1 text-xs font-medium hover:bg-black hover:text-white"
+                  >
+                    Connection Sent
+                  </button>
+                </div>
+              </div>
+
+              <!-- Card 3 -->
+              <div
+                class="relative w-full h-58 rounded-2xl overflow-hidden shadow-lg"
+              >
+                <!-- Profile Image -->
+                <img
+                  src="/asset/images/mary-card-image.png"
+                  alt="Profile"
+                  class="w-full h-full object-cover"
+                />
+
+                <!-- User Details (Absolute Position) -->
+                <div class="absolute bottom-2 left-1 text-white w-full px-3">
+                  <h3 class="text-sm font-semibold">Mary Sam</h3>
+                  <div
+                    class="flex items-center space-x-2 text-gray-300 text-xs"
+                  >
+                    <img
+                      src="/asset/images/mary-sam.png"
+                      class="w-6 h-6 rounded-full border border-white"
+                    />
+                    <span>mary-sam</span>
+                  </div>
+                  <button
+                    class="mt-2 w-full bg-white text-black rounded-full py-1 text-xs font-medium hover:bg-black hover:text-white"
+                  >
+                    Connect
+                  </button>
+                </div>
+              </div>
+            </div>
+          </div>
+          <!-- SECOND CONNECTIONS SECTION ENDS HERE -->
+          <!-- ############################### THIRD SECTION STARTS HERE ################################# -->
+          <section
+            class="sec3 w-[100%] mx-auto flex flex-col items-center justify-center mt-4 mb-3 border-b-[1px] border-gray-300"
+          >
+            <div class="flex justify-between items-end w-[100%]">
+              <div class="flex justify-start items-center gap-1 mt-3">
+                <img
+                  src="/asset/images/rtab-right-image-boy-icon.png"
+                  class="w-8 h-8 rounded-full"
+                />
+                <h2>fakhrinaufal</h2>
+                <img src="/asset/images/tree-icon.png" class="w-4 h-4" alt="" />
+                <p class="text-gray-300 text-xs md:text-sm">6m ago</p>
+              </div>
+
+              <div class="rounded-full border-[1px] p-2 flex items-end">
+                <i class="fa-solid fa-ellipsis"></i>
+              </div>
+            </div>
+            <div class="post mt-2">
+              <p class="text-sm">
+                I've been having a lot of fun lately making some awesome
+                graphics in midjourney
+              </p>
+              <p class="text-sm">
+                It adds flair to your site, but don't overdo it.
+              </p>
+              <p class="text-sm">
+                Would you be interested in some prompts or tutorial?
+              </p>
+            </div>
+            <!-- REPLY POST START -->
+            <div
+              class="flex justify-center items-center items-end w-[95%] mt-3 flex-col border-[1px] border-gray-300 p-3 rounded-lg"
+            >
+              <div class="flex justify-between items-center items-end w-[97%]">
+                <div class="flex justify-start items-center gap-1 mt-3">
+                  <img
+                    src="/asset/images/girl-image-right-f.png"
+                    class="w-8 h-8 rounded-full"
+                  />
+                  <h2>diana</h2>
+                  <img
+                    src="/asset/images/tree-icon.png"
+                    class="w-4 h-4"
+                    alt=""
+                  />
+                </div>
+
+                <div class="flex items-end">
+                  <p class="text-gray-300 text-xs md:text-sm">6m ago</p>
+                </div>
+              </div>
+              <div class="reply">
+                <p class="text-sm mt-2">
+                  Just hit 3,000+ followers on X! Thanks for being here and
+                  letting me share my work with you.
+                </p>
+              </div>
+            </div>
+            <!-- REPLY POST END -->
+            <div
+              class="flex flex-col items-start justify-start w-[100%] mt-2 mb-2"
+            >
+              <div
+                class="flex items-center space-x-2 px-2 rounded-full bg-gray-50"
+              >
+                <!-- Profile Images -->
+                <div class="flex -space-x-2">
+                  <img
+                    src="/asset/images/rtab-right-image-boy-icon.png"
+                    alt="User 1"
+                    class="w-6 h-6 rounded-full border-2 border-white hover:translate-y-[-4px] transition-transform duration-300 ease-out"
+                  />
+                  <img
+                    src="/asset/images/girl-image-right-f.png"
+                    alt="User 2"
+                    class="w-6 h-6 rounded-full border-2 border-white hover:translate-y-[-4px] transition-transform duration-300 ease-out"
+                  />
+                  <img
+                    src="/asset/images/imageicon-boy-centersection.png"
+                    alt="User 3"
+                    class="w-6 h-6 rounded-full border-2 border-white hover:translate-y-[-4px] transition-transform duration-300 ease-out"
+                  />
+                </div>
+
+                <!-- Like text -->
+                <p class="text-xs text-gray-700">
+                  Liked by <span class="font-bold text-sm">kriibooo</span> and
+                  <span class="font-bold text-sm">10 others</span>
+                </p>
+              </div>
+              <!-- OPTIONS OF LIKE SHARE ETC START -->
+              <div
+                class="flex items-center justify-between space-x-3 w-[95%] mt-2 mb-3"
+              >
+                <div class="flex space-x-3">
+                  <!-- Like Button 1 -->
+                  <div
+                    class="likeButton flex items-center space-x-1 bg-gray-50 px-4 py-2 rounded-full shadow-sm hover:bg-gray-200 transition duration-300 cursor-pointer"
+                  >
+                    <i class="fa-solid fa-heart text-gray-500"></i>
+                    <span class="likeCount text-gray-500 text-sm font-medium"
+                      >123</span
+                    >
+                  </div>
+                  <!-- Repost Button -->
+                  <div
+                    class="repostButton flex items-center space-x-1 bg-gray-50 px-4 py-2 rounded-full shadow-sm hover:bg-gray-200 transition duration-300 cursor-pointer"
+                  >
+                    <i class="fa-solid fa-repeat text-gray-500"></i>
+                    <span class="repostCount text-gray-500 text-sm font-medium"
+                      >999</span
+                    >
+                  </div>
+                  <!-- Share Button 3 -->
+                  <div
+                    class="shareButton flex items-center space-x-1 bg-gray-50 px-4 py-2 rounded-full shadow-sm hover:bg-gray-200 transition duration-300 cursor-pointer"
+                  >
+                    <i
+                      class="fa-solid fa-square-arrow-up-right text-gray-500"
+                    ></i>
+                    <span class="shareCount text-gray-500 text-sm font-medium"
+                      >999</span
+                    >
+                  </div>
+                </div>
+                <div class="save">
+                  <!-- Save Button 3 -->
+                  <div
+                    class="saveButton flex items-center bg-gray-50 px-4 py-2 mb-2 rounded-full shadow-sm hover:bg-gray-200 transition duration-300 cursor-pointer"
+                  >
+                    <i class="fa-solid fa-bookmark text-gray-500"></i>
+                  </div>
+                </div>
+              </div>
+              <div class="flex flex-col justify-start w-full">
+                <p class="text-sm text-gray-400">See all 7 comments</p>
+                <p class="text-xs font-semibold">
+                  alenamakarov <span class="text-sm"> Lets goo!</span>
+                </p>
+                <div class="flex items-center gap-2">
+                  <img
+                    src="/asset/images/nav-icon-image-girl.png"
+                    class="h-6 w-6 rounded-full"
+                    alt=""
+                  />
+                  <!-- text area with btn start -->
+                  <div class="relative w-full mt-3">
+                    <textarea
+                      class="commentBox text-sm w-full p-2 border rounded-lg focus:ring-1 focus:ring-gray-500 focus:border-gray-500 resize-none overflow-hidden"
+                      placeholder="Add a comment..."
+                      rows="1"
+                    ></textarea>
+                    <button
+                      class="sendButton absolute right-3 top-1/2 transform -translate-y-1/2 text-blue-500 hidden"
+                    >
+                      <i class="fa-solid fa-paper-plane"></i>
+                    </button>
+                  </div>
+
+                  <!-- text area with btn end -->
+                </div>
+              </div>
+              <!-- OPTIONS OF LIKE SHARE ETC END -->
+            </div>
+          </section>
+          <!-- THIRD SECTION ENDS HERE -->
+          <!-- ############################### FOURTH SECTION STARTS HERE #################################-->
+          <section class="sec4 w-full">
+            <div class="flex justify-between items-end w-[100%]">
+              <div class="flex flex-col">
+                <div class="flex justify-start items-center gap-1 mt-3">
+                  <img
+                    src="/asset/images/rtab-right-image-boy-icon.png"
+                    class="w-8 h-8 rounded-full"
+                  />
+                  <h2>fakhrinaufal</h2>
+                  <img
+                    src="/asset/images/tree-icon.png"
+                    class="w-4 h-4"
+                    alt=""
+                  />
+                  <p class="text-gray-300 text-xs md:text-sm">6m ago</p>
+                </div>
+              </div>
+              <div class="rounded-full border-[1px] p-2 flex items-end">
+                <i class="fa-solid fa-ellipsis"></i>
+              </div>
+            </div>
+            <p class="text-sm mt-2">
+              Just hit 3,000+ followers on X! Thanks for being here and letting
+              me share my work with you.
+            </p>
+            <img
+              src="/asset/images/hero-second-image.png"
+              class="h-[400px] w-full"
+              alt=""
+            />
+            <div class="flex items-start justify-start w-full mt-2">
+              <div
+                class="flex items-center space-x-2 px-2 rounded-full bg-gray-50"
+              >
+                <!-- Profile Images -->
+                <div class="flex -space-x-2">
+                  <img
+                    src="/asset/images/rtab-right-image-boy-icon.png"
+                    alt="User 1"
+                    class="w-6 h-6 rounded-full border-2 border-white hover:translate-y-[-4px] transition-transform duration-300 ease-out"
+                  />
+                  <img
+                    src="/asset/images/girl-image-right-f.png"
+                    alt="User 2"
+                    class="w-6 h-6 rounded-full border-2 border-white hover:translate-y-[-4px] transition-transform duration-300 ease-out"
+                  />
+                  <img
+                    src="/asset/images/imageicon-boy-centersection.png"
+                    alt="User 3"
+                    class="w-6 h-6 rounded-full border-2 border-white hover:translate-y-[-4px] transition-transform duration-300 ease-out"
+                  />
+                </div>
+
+                <!-- Like text -->
+                <p class="text-xs text-gray-700">
+                  Liked by <span class="font-bold text-sm">kriibooo</span> and
+                  <span class="font-bold text-sm">10 others</span>
+                </p>
+              </div>
+            </div>
+            <div
+              class="flex items-center justify-between space-x-3 w-[95%] mt-2 mb-3"
+            >
+              <div class="flex space-x-3">
+                <!-- Like Button 1 -->
+                <div
+                  class="likeButton flex items-center space-x-1 bg-gray-50 px-4 py-2 rounded-full shadow-sm hover:bg-gray-200 transition duration-300 cursor-pointer"
+                >
+                  <i class="fa-solid fa-heart text-gray-500"></i>
+                  <span class="likeCount text-gray-500 text-sm font-medium"
+                    >123</span
+                  >
+                </div>
+                <!-- Repost Button -->
+                <div
+                  class="repostButton flex items-center space-x-1 bg-gray-50 px-4 py-2 rounded-full shadow-sm hover:bg-gray-200 transition duration-300 cursor-pointer"
+                >
+                  <i class="fa-solid fa-repeat text-gray-500"></i>
+                  <span class="repostCount text-gray-500 text-sm font-medium"
+                    >999</span
+                  >
+                </div>
+                <!-- Share Button 3 -->
+                <div
+                  class="shareButton flex items-center space-x-1 bg-gray-50 px-4 py-2 rounded-full shadow-sm hover:bg-gray-200 transition duration-300 cursor-pointer"
+                >
+                  <i
+                    class="fa-solid fa-square-arrow-up-right text-gray-500"
+                  ></i>
+                  <span class="shareCount text-gray-500 text-sm font-medium"
+                    >999</span
+                  >
+                </div>
+              </div>
+              <div class="save">
+                <!-- Save Button 3 -->
+                <div
+                  class="saveButton flex items-center bg-gray-50 px-4 py-2 mb-2 rounded-full shadow-sm hover:bg-gray-200 transition duration-300 cursor-pointer"
+                >
+                  <i class="fa-solid fa-bookmark text-gray-500"></i>
+                </div>
+              </div>
+            </div>
+          </section>
+          <!-- FOURTH SECTION ENDS HERE -->
+          <!-- ######################################### FIFTH SECTION STARTS HERE ############################################## -->
+          <section
+            class="sec3 w-[100%] mx-auto flex flex-col items-center justify-center mt-4"
+          >
+            <div class="flex justify-between items-end w-[100%]">
+              <div class="flex justify-start items-center gap-1 mt-3">
+                <img
+                  src="/asset/images/rtab-right-image-boy-icon.png"
+                  class="w-8 h-8 rounded-full"
+                />
+                <h2>fakhrinaufal</h2>
+                <img src="/asset/images/tree-icon.png" class="w-4 h-4" alt="" />
+                <p class="text-gray-300 text-xs md:text-sm">6m ago</p>
+              </div>
+
+              <div class="rounded-full border-[1px] p-2 flex items-end">
+                <i class="fa-solid fa-ellipsis"></i>
+              </div>
+            </div>
+            <div class="post mt-2">
+              <p class="text-sm">
+                I've been having a lot of fun lately making some awesome
+                graphics in midjourney
+              </p>
+            </div>
+            <!-- OPTIONS START HERE  -->
+            <div class="w-[100%] bg-white py-3 rounded mt-2">
+              <div id="poll-options">
+                <!-- Options will be inserted dynamically -->
+              </div>
+              <p
+                class="text-sm text-gray-500 mt-2 cursor-pointer"
+                id="total-votes"
+              >
+                0 vote(s) • Ends in 23:00:00
+              </p>
+            </div>
+
+            <!-- OPTIONS ENDS HERE  -->
+            <!-- REPLY POST START -->
+            <div
+              class="flex justify-center items-center items-end w-[95%] mt-3 flex-col border-[1px] border-gray-300 p-3 rounded-lg"
+            >
+              <div class="flex justify-between items-center items-end w-[97%]">
+                <div class="flex justify-start items-center gap-1 mt-3">
+                  <img
+                    src="/asset/images/girl-image-right-f.png"
+                    class="w-8 h-8 rounded-full"
+                  />
+                  <p class="text-sm font-semibold">diana</p>
+                  <img
+                    src="/asset/images/tree-icon.png"
+                    class="w-4 h-4"
+                    alt=""
+                  />
+                </div>
+
+                <div class="flex items-end">
+                  <p class="text-gray-300 text-xs md:text-sm">6m ago</p>
+                </div>
+              </div>
+              <div class="reply">
+                <p class="text-sm mt-2">
+                  Just hit 3,000+ followers on X! Thanks for being here and
+                  letting me share my work with you.
+                </p>
+              </div>
+            </div>
+            <!-- REPLY POST END -->
+            <div
+              class="flex flex-col items-start justify-start w-[100%] mt-2 mb-2"
+            >
+              <div
+                class="flex items-center space-x-2 px-2 rounded-full bg-gray-50"
+              >
+                <!-- Profile Images -->
+                <div class="flex -space-x-2">
+                  <img
+                    src="/asset/images/rtab-right-image-boy-icon.png"
+                    alt="User 1"
+                    class="w-6 h-6 rounded-full border-2 border-white hover:translate-y-[-4px] transition-transform duration-300 ease-out"
+                  />
+                  <img
+                    src="/asset/images/girl-image-right-f.png"
+                    alt="User 2"
+                    class="w-6 h-6 rounded-full border-2 border-white hover:translate-y-[-4px] transition-transform duration-300 ease-out"
+                  />
+                  <img
+                    src="/asset/images/imageicon-boy-centersection.png"
+                    alt="User 3"
+                    class="w-6 h-6 rounded-full border-2 border-white hover:translate-y-[-4px] transition-transform duration-300 ease-out"
+                  />
+                </div>
+
+                <!-- Like text -->
+                <p class="text-xs text-gray-700">
+                  Liked by <span class="font-bold text-sm">kriibooo</span> and
+                  <span class="font-bold text-sm">10 others</span>
+                </p>
+              </div>
+              <!-- OPTIONS OF LIKE SHARE ETC START -->
+              <div
+                class="flex items-center justify-between space-x-3 w-[95%] mt-2 mb-3"
+              >
+                <div class="flex space-x-3">
+                  <!-- Like Button 1 -->
+                  <div
+                    class="likeButton flex items-center space-x-1 bg-gray-50 px-4 py-2 rounded-full shadow-sm hover:bg-gray-200 transition duration-300 cursor-pointer"
+                  >
+                    <i class="fa-solid fa-heart text-gray-500"></i>
+                    <span class="likeCount text-gray-500 text-sm font-medium"
+                      >123</span
+                    >
+                  </div>
+                  <!-- Repost Button -->
+                  <div
+                    class="repostButton flex items-center space-x-1 bg-gray-50 px-4 py-2 rounded-full shadow-sm hover:bg-gray-200 transition duration-300 cursor-pointer"
+                  >
+                    <i class="fa-solid fa-repeat text-gray-500"></i>
+                    <span class="repostCount text-gray-500 text-sm font-medium"
+                      >999</span
+                    >
+                  </div>
+                  <!-- Share Button 3 -->
+                  <div
+                    class="shareButton flex items-center space-x-1 bg-gray-50 px-4 py-2 rounded-full shadow-sm hover:bg-gray-200 transition duration-300 cursor-pointer"
+                  >
+                    <i
+                      class="fa-solid fa-square-arrow-up-right text-gray-500"
+                    ></i>
+                    <span class="shareCount text-gray-500 text-sm font-medium"
+                      >999</span
+                    >
+                  </div>
+                </div>
+                <div class="save">
+                  <!-- Save Button 3 -->
+                  <div
+                    class="saveButton flex items-center bg-gray-50 px-4 py-2 mb-2 rounded-full shadow-sm hover:bg-gray-200 transition duration-300 cursor-pointer"
+                  >
+                    <i class="fa-solid fa-bookmark text-gray-500"></i>
+                  </div>
+                </div>
+              </div>
+              <div class="flex flex-col justify-start w-full">
+                <p class="text-sm text-gray-400">See all 7 comments</p>
+                <p class="text-xs font-semibold">
+                  alenamakarov <span class="text-sm"> Lets goo!</span>
+                </p>
+                <div class="flex items-center gap-2">
+                  <img
+                    src="/asset/images/nav-icon-image-girl.png"
+                    class="h-6 w-6 rounded-full"
+                    alt=""
+                  />
+                  <!-- text area with btn start -->
+                  <div class="relative w-full mt-3">
+                    <textarea
+                      class="commentBox text-sm w-full p-2 border rounded-lg focus:ring-1 focus:ring-gray-500 focus:border-gray-500 resize-none overflow-hidden"
+                      placeholder="Add a comment..."
+                      rows="1"
+                    ></textarea>
+                    <button
+                      class="sendButton absolute right-3 top-1/2 transform -translate-y-1/2 text-blue-500 hidden"
+                    >
+                      <i class="fa-solid fa-paper-plane"></i>
+                    </button>
+                  </div>
+                  <!-- text area with btn end -->
+                </div>
+              </div>
+              <!-- OPTIONS OF LIKE SHARE ETC END -->
+            </div>
+          </section>
+          <!-- FIFTH SECTION ENDS HERE -->
+          <!-- @@@@@@@@@@@@@@@@@@@@@@@@@@@@@ SIXTH SECTION STARTS HERE @@@@@@@@@@@@@@@@@@@@ -->
+          <section class="sec6 w-full">
+            <div class="relative w-full mx-auto">
+              <!-- Video Container -->
+              <div class="video">
+                <video
+                  src="/asset/images/video-section.mp4"
+                  class="w-full h-[90vh] object-cover"
+                  autoplay
+                  loop
+                  playsinline
+                  preload="auto"
+                ></video>
+              </div>
+
+              <!-- Video Info Overlay -->
+              <div
+                class="absolute top-0 left-0 w-full h-full flex flex-col justify-between p-2"
+              >
+                <!-- Top Section (Profile + Time + Dots) -->
+                <div class="flex items-center justify-between">
+                  <div class="flex items-center gap-2">
+                    <img
+                      src="/asset/images/rtab-right-image-boy-icon.png"
+                      class="w-8 h-8 rounded-full"
+                    />
+                    <h2 class="text-white font-semibold">fakhrinaufal</h2>
+                    <img
+                      src="/asset/images/tree-icon.png"
+                      class="w-4 h-4 invert"
+                      alt=""
+                    />
+                    <p class="text-gray-300 text-xs md:text-sm">6m ago</p>
+                  </div>
+                  <div
+                    class="rounded-full border border-gray-300 px-2 py-1 cursor-pointer"
+                  >
+                    <i class="fa-solid fa-ellipsis text-white"></i>
+                  </div>
+                </div>
+
+                <!-- Bottom Section (Time + Mute Icon) -->
+                <div class="flex justify-between items-center">
+                  <p
+                    class="text-white text-xs bg-black bg-opacity-50 px-2 py-1 rounded-md"
+                  >
+                    00:14
+                  </p>
+                  <i
+                    class="fa-solid fa-volume-xmark text-white text-lg cursor-pointer"
+                  ></i>
+                </div>
+              </div>
+            </div>
+
+            <div
+              class="flex flex-col items-start justify-start w-[100%] mt-2 mb-2"
+            >
+              <div
+                class="flex items-center space-x-2 px-2 rounded-full bg-gray-50"
+              >
+                <!-- Profile Images -->
+                <div class="flex -space-x-2">
+                  <img
+                    src="/asset/images/rtab-right-image-boy-icon.png"
+                    alt="User 1"
+                    class="w-6 h-6 rounded-full border-2 border-white hover:translate-y-[-4px] transition-transform duration-300 ease-out"
+                  />
+                  <img
+                    src="/asset/images/girl-image-right-f.png"
+                    alt="User 2"
+                    class="w-6 h-6 rounded-full border-2 border-white hover:translate-y-[-4px] transition-transform duration-300 ease-out"
+                  />
+                  <img
+                    src="/asset/images/imageicon-boy-centersection.png"
+                    alt="User 3"
+                    class="w-6 h-6 rounded-full border-2 border-white hover:translate-y-[-4px] transition-transform duration-300 ease-out"
+                  />
+                </div>
+
+                <!-- Like text -->
+                <p class="text-xs text-gray-700">
+                  Liked by <span class="font-bold text-sm">kriibooo</span> and
+                  <span class="font-bold text-sm">10 others</span>
+                </p>
+              </div>
+              <!-- OPTIONS OF LIKE SHARE ETC START -->
+              <div
+                class="flex items-center justify-between space-x-3 w-[95%] mt-2 mb-3"
+              >
+                <div class="flex space-x-3">
+                  <!-- Like Button 1 -->
+                  <div
+                    class="likeButton flex items-center space-x-1 bg-gray-50 px-4 py-2 rounded-full shadow-sm hover:bg-gray-200 transition duration-300 cursor-pointer"
+                  >
+                    <i class="fa-solid fa-heart text-gray-500"></i>
+                    <span class="likeCount text-gray-500 text-sm font-medium"
+                      >123</span
+                    >
+                  </div>
+                  <!-- Repost Button -->
+                  <div
+                    class="repostButton flex items-center space-x-1 bg-gray-50 px-4 py-2 rounded-full shadow-sm hover:bg-gray-200 transition duration-300 cursor-pointer"
+                  >
+                    <i class="fa-solid fa-repeat text-gray-500"></i>
+                    <span class="repostCount text-gray-500 text-sm font-medium"
+                      >999</span
+                    >
+                  </div>
+                  <!-- Share Button 3 -->
+                  <div
+                    class="shareButton flex items-center space-x-1 bg-gray-50 px-4 py-2 rounded-full shadow-sm hover:bg-gray-200 transition duration-300 cursor-pointer"
+                  >
+                    <i
+                      class="fa-solid fa-square-arrow-up-right text-gray-500"
+                    ></i>
+                    <span class="shareCount text-gray-500 text-sm font-medium"
+                      >999</span
+                    >
+                  </div>
+                </div>
+                <div class="save">
+                  <!-- Save Button 3 -->
+                  <div
+                    class="saveButton flex items-center bg-gray-50 px-4 py-2 mb-2 rounded-full shadow-sm hover:bg-gray-200 transition duration-300 cursor-pointer"
+                  >
+                    <i class="fa-solid fa-bookmark text-gray-500"></i>
+                  </div>
+                </div>
+              </div>
+              <div class="flex flex-col justify-start w-full">
+                <p class="text-sm text-gray-400">See all 7 comments</p>
+                <p class="text-xs font-semibold">
+                  alenamakarov <span class="text-sm"> Lets goo!</span>
+                </p>
+                <div class="flex items-center gap-2">
+                  <img
+                    src="/asset/images/nav-icon-image-girl.png"
+                    class="h-6 w-6 rounded-full"
+                    alt=""
+                  />
+                  <!-- text area with btn start -->
+                  <div class="relative w-full mt-3">
+                    <textarea
+                      class="commentBox text-sm w-full p-2 border rounded-lg focus:ring-1 focus:ring-gray-500 focus:border-gray-500 resize-none overflow-hidden"
+                      placeholder="Add a comment..."
+                      rows="1"
+                    ></textarea>
+                    <button
+                      class="sendButton absolute right-3 top-1/2 transform -translate-y-1/2 text-blue-500 hidden"
+                    >
+                      <i class="fa-solid fa-paper-plane"></i>
+                    </button>
+                  </div>
+                  <!-- text area with btn end -->
+                </div>
+              </div>
+              <!-- OPTIONS OF LIKE SHARE ETC END -->
+            </div>
+          </section>
+
+          <!-- SIXTH SECTION ENDS HERE -->
+          <!-- SEVENTH SECTION STARTS HERE -->
+          <section
+            class="sec7 w-[100%] mx-auto flex flex-col items-center justify-center mt-4 mb-3 border-b-[1px] border-gray-300"
+          >
+            <div class="flex justify-between items-end w-[100%]">
+              <div class="flex justify-start items-center gap-1 mt-3">
+                <img
+                  src="/asset/images/rtab-right-image-boy-icon.png"
+                  class="w-8 h-8 rounded-full"
+                />
+                <h2>fakhrinaufal</h2>
+                <img src="/asset/images/tree-icon.png" class="w-4 h-4" alt="" />
+                <p class="text-gray-300 text-xs md:text-sm">6m ago</p>
+              </div>
+
+              <div class="rounded-full border-[1px] p-2 flex items-end">
+                <i class="fa-solid fa-ellipsis"></i>
+              </div>
+            </div>
+            <div class="post mt-2">
+              <p class="text-xs md:text-sm">
+                I've been having a lot of fun lately making some awesome
+                graphics in midjourney
+              </p>
+              <p class="text-xs md:text-sm">
+                It adds flair to your site, but don't overdo it.
+              </p>
+              <p class="text-xs md:text-sm">
+                Would you be interested in some prompts or tutorial?
+              </p>
+            </div>
+            <div
+              class="flex flex-col items-start justify-start w-[100%] mt-2 mb-20"
+            >
+              <div
+                class="flex items-center space-x-2 px-2 rounded-full bg-gray-50"
+              >
+                <!-- Profile Images -->
+                <div class="flex -space-x-2">
+                  <img
+                    src="/asset/images/rtab-right-image-boy-icon.png"
+                    alt="User 1"
+                    class="w-6 h-6 rounded-full border-2 border-white hover:translate-y-[-4px] transition-transform duration-300 ease-out"
+                  />
+                  <img
+                    src="/asset/images/girl-image-right-f.png"
+                    alt="User 2"
+                    class="w-6 h-6 rounded-full border-2 border-white hover:translate-y-[-4px] transition-transform duration-300 ease-out"
+                  />
+                  <img
+                    src="/asset/images/imageicon-boy-centersection.png"
+                    alt="User 3"
+                    class="w-6 h-6 rounded-full border-2 border-white hover:translate-y-[-4px] transition-transform duration-300 ease-out"
+                  />
+                </div>
+
+                <!-- Like text -->
+                <p class="text-xs text-gray-700">
+                  Liked by <span class="font-bold text-sm">kriibooo</span> and
+                  <span class="font-bold text-sm">10 others</span>
+                </p>
+              </div>
+              <!-- OPTIONS OF LIKE SHARE ETC START -->
+              <div
+                class="flex items-center justify-between space-x-3 w-[95%] mt-2 mb-3"
+              >
+                <div class="flex space-x-3">
+                  <!-- Like Button 1 -->
+                  <div
+                    class="likeButton flex items-center space-x-1 bg-gray-50 px-4 py-2 rounded-full shadow-sm hover:bg-gray-200 transition duration-300 cursor-pointer"
+                  >
+                    <i class="fa-solid fa-heart text-gray-500"></i>
+                    <span class="likeCount text-gray-500 text-sm font-medium"
+                      >123</span
+                    >
+                  </div>
+                  <!-- Repost Button -->
+                  <div
+                    class="repostButton flex items-center space-x-1 bg-gray-50 px-4 py-2 rounded-full shadow-sm hover:bg-gray-200 transition duration-300 cursor-pointer"
+                  >
+                    <i class="fa-solid fa-repeat text-gray-500"></i>
+                    <span class="repostCount text-gray-500 text-sm font-medium"
+                      >999</span
+                    >
+                  </div>
+                  <!-- Share Button 3 -->
+                  <div
+                    class="shareButton flex items-center space-x-1 bg-gray-50 px-4 py-2 rounded-full shadow-sm hover:bg-gray-200 transition duration-300 cursor-pointer"
+                  >
+                    <i
+                      class="fa-solid fa-square-arrow-up-right text-gray-500"
+                    ></i>
+                    <span class="shareCount text-gray-500 text-sm font-medium"
+                      >999</span
+                    >
+                  </div>
+                </div>
+                <div class="save">
+                  <!-- Save Button 3 -->
+                  <div
+                    class="saveButton flex items-center bg-gray-50 px-4 py-2 mb-2 rounded-full shadow-sm hover:bg-gray-200 transition duration-300 cursor-pointer"
+                  >
+                    <i class="fa-solid fa-bookmark text-gray-500"></i>
+                  </div>
+                </div>
+              </div>
+              <div class="flex flex-col justify-start w-full">
+                <p class="text-sm text-gray-400">See all 7 comments</p>
+                <p class="text-xs font-semibold">
+                  alenamakarov <span class="text-sm"> Lets goo!</span>
+                </p>
+                <div class="flex items-center gap-2">
+                  <img
+                    src="/asset/images/nav-icon-image-girl.png"
+                    class="h-6 w-6 rounded-full"
+                    alt=""
+                  />
+                  <!-- text area with btn start -->
+                  <div class="relative w-full mt-3">
+                    <textarea
+                      class="commentBox text-sm w-full p-2 border rounded-lg focus:ring-1 focus:ring-gray-500 focus:border-gray-500 resize-none overflow-hidden"
+                      placeholder="Add a comment..."
+                      rows="1"
+                    ></textarea>
+                    <button
+                      class="sendButton absolute right-3 top-1/2 transform -translate-y-1/2 text-blue-500 hidden"
+                    >
+                      <i class="fa-solid fa-paper-plane"></i>
+                    </button>
+                  </div>
+                  <!-- text area with btn end -->
+                </div>
+              </div>
+              <!-- OPTIONS OF LIKE SHARE ETC END -->
+            </div>
+          </section>
+          <!-- SEVENTH SECTION ENDS HERE -->
+        </div>
+        <!-- MAIN SECTION ENDS HERE  -->
+      </div>
+      <!-- ########################## MIDDLE SECTION ENDS HERE ############################### -->
+      <!-- ####################### RIGHT BAR STARTS HERE ############################### -->
+      <div
+        class="md:fixed top-20 right-0 h-full w-[28.5%] overflow-y-auto scrollbar-hidden hidden md:block w-full md:w-[28.5%] bg-white border-t-[1px] border-gray-300 p-4 h-screen"
+      >
+        <!-- Flex from Friends Section -->
+        <div class="bg-white p-4 rounded-lg shadow-sm">
+          <div class="flex justify-between items-center mb-4">
+            <h2 class="text-lg font-semibold">Flex from friends</h2>
+            <a href="#" class="text-green-600 font-medium">See more</a>
+          </div>
+
+          <!-- Friend Cards -->
+          <div class="grid grid-cols-2 gap-3">
+            <!-- Friend 1 -->
+            <div class="relative">
+              <img
+                src="/asset/images/right-tab-left-image.png"
+                alt="Friend 1"
+                class="rounded-xl w-full h-45 object-cover"
+              />
+              <div
+                class="absolute top-2 left-2 rounded-full p-[1px] border-2 border-orange-500"
+              >
+                <div class="relative">
+                  <img
+                    src="/asset/images/girl-image-right-f.png"
+                    class="w-8 h-8 rounded-full"
+                  />
+                  <div class="absolute bottom-0 right-0">
+                    <img
+                      src="/asset/images/green star.png"
+                      class="h-3 w-3"
+                      alt=""
+                    />
+                  </div>
+                </div>
+              </div>
+              <div class="absolute bottom-2 left-2">
+                <p class="mt-2 text-sm text-white font-medium">dianamewing</p>
+              </div>
+            </div>
+
+            <!-- Friend 2 -->
+            <div class="relative">
+              <img
+                src="/asset/images/rtab-right-image.png"
+                alt="Friend 2"
+                class="rounded-xl w-full h-45 object-cover"
+              />
+              <div
+                class="absolute top-2 left-2 rounded-full p-[1px] border-2 border-orange-500"
+              >
+                <img
+                  src="/asset/images/rtab-right-image-boy-icon.png"
+                  class="w-8 h-8 rounded-full"
+                />
+              </div>
+              <div class="absolute bottom-2 left-2">
+                <p class="mt-2 text-sm text-white font-medium">alexjohn</p>
+              </div>
+            </div>
+          </div>
+        </div>
+        <!-- Subscription Card -->
+        <div
+          class="bg-gray-900 text-white p-4 rounded-xl mt-6 flex justify-between bg-custom-yohop bg-cover bg-center"
+        >
+          <div class="flex flex-col">
+            <div class="flex flex-col">
+              <div
+                class="flex items-center justify-center rounded-full bg-green-500 w-10 h-10 mb-2"
+              >
+                <img
+                  src="/asset/images/Icon-crown-righttab.png"
+                  class="h-5 w-5"
+                  alt=""
+                />
+              </div>
+              <h3 class="text-lg font-semibold mb-1">
+                Subscribed to Yohop Plus
+              </h3>
+              <p class="text-sm text-gray-300 mb-2">Renews on 5 Nov 2024</p>
+            </div>
+          </div>
+          <div class="flex items-center justify-center mt-4">
+            <div
+              class="bg-green-500 text-white rounded-full flex items-center justify-center w-10 h-10"
+            >
+              <i class="fa-solid fa-arrow-right"></i>
+            </div>
+          </div>
+        </div>
+      </div>
+      <!--  RIGHT BAR ENDS HERE  -->
+    </main>
+
+    <!-- MAIN SECTION ENDS HERE  -->
+
+    <!-- JS LINKS HERE -->
+    <script src="/asset/js/sript.js"></script>
+  </body>
+</html>

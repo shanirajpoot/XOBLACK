@@ -1,0 +1,861 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Combined Modals</title>
+    <script
+      src="https://cdn.jsdelivr.net/npm/alpinejs@3.x.x/dist/cdn.min.js"
+      defer
+    ></script>
+    <script
+      src="https://kit.fontawesome.com/a076d05399.js"
+      crossorigin="anonymous"
+    ></script>
+    <link
+      href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css"
+      rel="stylesheet"
+    />
+  </head>
+  <body>
+    <div
+      class="bg-white w-full h-screen flex items-center justify-center bg-gray-100"
+    >
+      <div
+        id="modal1"
+        class="bg-white md:w-1/2 w-full pt-4 rounded-2xl shadow-lg"
+      >
+        <button
+          class="absolute top-[1.2rem] left-2 text-gray-600 hover:text-black px-1 rounded-full border-[1px]"
+        >
+          <i class="fas fa-arrow-left"></i>
+        </button>
+        <h2 class="text-center text-xl font-bold">Create Post</h2>
+        <div class="flex items-center mt-4 pl-3">
+          <img
+            src="/asset/images/nav-icon-image-girl.png"
+            alt="Profile"
+            class="w-6 h-6 rounded-full"
+          />
+          <span class="font-semibold text-xs">Taylor Hill</span>
+        </div>
+        <textarea
+          class="w-full rounded-lg focus:outline-none text-xs px-5 h-48 mt-2"
+          placeholder="Write a caption..."
+        ></textarea>
+
+        <div
+          x-data="{ selected: 'Only followers', open: false }"
+          class="flex items-center justify-between px-3 p-1 mt-5 border-t border-b relative"
+        >
+          <!-- Person Icon -->
+          <i class="fas fa-users text-gray-600"></i>
+
+          <div class="relative w-full ml-2">
+            <!-- Button -->
+            <button
+              @click="open = !open"
+              class="flex justify-between items-center w-full text-gray-600"
+            >
+              <span x-text="selected" class="text-xs"></span>
+              <i class="fas fa-chevron-down"></i>
+            </button>
+
+            <!-- Dropdown Menu -->
+            <div
+              x-show="open"
+              @click.away="open = false"
+              class="absolute bottom-full left-0 w-full bg-white border border-gray-300 rounded-lg shadow-lg transition-all duration-200"
+            >
+              <ul class="py-2 text-gray-700">
+                <li>
+                  <a
+                    href="#"
+                    @click="selected = 'Show to selected'; open = false"
+                    class="text-xs block px-4 py-2 hover:bg-gray-100"
+                  >
+                    Show to selected
+                  </a>
+                </li>
+                <li>
+                  <a
+                    href="#"
+                    @click="selected = 'Show except these'; open = false"
+                    class="text-xs block px-4 py-2 hover:bg-gray-100"
+                  >
+                    Show except these
+                  </a>
+                </li>
+                <li>
+                  <a
+                    href="#"
+                    @click="selected = 'Only followers'; open = false"
+                    class="text-xs block px-4 py-2 hover:bg-gray-100"
+                  >
+                    Only followers
+                  </a>
+                </li>
+              </ul>
+            </div>
+          </div>
+        </div>
+
+        <div class="flex justify-between items-center px-3 mt-3 mb-3">
+          <div class="icons flex gap-3 text-center text-gray-600">
+            <div class="flex flex-col items-center">
+              <i class="fas fa-image"></i>
+              <span class="text-xs hidden md:block">Gallery</span>
+            </div>
+            <div class="flex flex-col items-center">
+              <i class="fas fa-gift"></i>
+              <span class="text-xs hidden md:block">GIF</span>
+            </div>
+            <div class="flex flex-col items-center">
+              <i class="fas fa-poll"></i>
+              <span class="text-xs hidden md:block">Polling</span>
+            </div>
+            <div class="flex flex-col items-center">
+              <i class="fas fa-map-marker-alt"></i>
+              <span class="text-xs hidden md:block">Location</span>
+            </div>
+            <div class="flex flex-col items-center">
+              <i class="fas fa-clock"></i>
+              <span class="text-xs hidden md:block">Schedule</span>
+            </div>
+            <div class="flex flex-col items-center">
+              <i class="fas fa-paper-plane"></i>
+              <span class="text-xs hidden md:block">Share to</span>
+            </div>
+          </div>
+
+          <div class="btn flex items-center justify-center">
+            <button
+              data-modal="modal2"
+              class="text-xs md:text-sm w-full bg-green-500 border-2 border-green-500 text-white md:p-1 px-1 md:px-5 rounded-3xl hover:bg-white hover:text-black"
+            >
+              Next
+            </button>
+          </div>
+        </div>
+      </div>
+
+      <div class="bg-gray-100 h-screen flex items-center justify-center">
+        <!-- Modal Buttons -->
+
+        <!-- Modals -->
+        <!-- Modal 1 -->
+
+        <!-- Modal 2 -->
+
+        <div id="modal2" class="bg-white w-[420px] rounded-2xl shadow-lg p-5">
+          <!-- Header -->
+          <div class="flex items-center justify-between border-b pb-2">
+            <button class="text-gray-600">
+              <i class="fas fa-arrow-left"></i>
+            </button>
+            <h2 class="text-lg font-semibold">Post Schedule</h2>
+            <div></div>
+            <!-- Empty div to balance flex -->
+          </div>
+          <!-- Date and Time Inputs -->
+          <div class="mt-4 flex flex-col md:flex-row justify-between gap-4">
+            <!-- Date Input -->
+            <div class="w-full">
+              <label for="date" class="text-gray-700 font-medium mb-1 block"
+                >Date</label
+              >
+              <div class="flex items-center border p-2 rounded-lg w-full">
+                <i class="fas fa-calendar-alt text-gray-500 mr-2"></i>
+                <input
+                  type="date"
+                  class="w-full outline-none text-gray-700 bg-transparent"
+                  value="2024-11-29"
+                  id="date"
+                />
+              </div>
+            </div>
+
+            <!-- Time Input -->
+            <div class="w-full">
+              <label for="time" class="text-gray-700 font-medium mb-1 block"
+                >Time</label
+              >
+              <div class="flex items-center border p-2 rounded-lg w-full">
+                <i class="fas fa-clock text-gray-500 mr-2"></i>
+                <input
+                  type="time"
+                  class="w-full outline-none text-gray-700 bg-transparent"
+                  value="10:00"
+                  id="time"
+                />
+              </div>
+            </div>
+          </div>
+
+          <!-- Upload Time Info -->
+          <div class="bg-gray-100 mt-4 p-3 rounded-lg">
+            <p class="text-gray-600 font-semibold flex items-center">
+              <i class="fas fa-upload mr-2"></i> Upload Time
+            </p>
+            <p class="text-gray-500 text-sm">
+              Will be sent on Sun, Oct 29, 2024 at 10:00 PM
+            </p>
+          </div>
+
+          <!-- Confirm Button -->
+          <button
+            data-modal="modal3"
+            class="w-full mt-5 bg-green-500 text-white py-2 rounded-2xl hover:bg-green-600"
+          >
+            Confirm
+          </button>
+        </div>
+
+        <!-- Modal 3: Image with x-icon -->
+
+        <div
+          id="modal3"
+          class="bg-white md:w-1/1 w-full mt-5 pt-4 rounded-2xl shadow-lg relative"
+        >
+          <button
+            class="absolute top-[1.2rem] left-2 text-gray-600 hover:text-black px-1 rounded-full border-[1px]"
+          >
+            <i class="fas fa-arrow-left"></i>
+          </button>
+          <h2 class="text-center text-xl font-bold">Create Post</h2>
+          <div class="flex items-center mt-4 pl-3">
+            <img
+              src="/asset/images/nav-icon-image-girl.png"
+              alt="Profile"
+              class="w-6 h-6 rounded-full"
+            />
+            <span class="font-semibold text-xs">Taylor Hill</span>
+          </div>
+          <textarea
+            class="w-full rounded-lg focus:outline-none text-xs px-5 h-48 mt-2"
+            placeholder=""
+          >
+  Just hit 3,000+ followers on YOHOP! 
+        Thanks for being here and letting me share my work with you. 🔥🔥🔥</textarea
+          >
+          <div class="post-info flex justify-center w-full">
+            <div
+              class="flex justify-between items-center p-3 rounded-lg border w-full mx-5 bg-white shadow-md"
+            >
+              <!-- Left Section -->
+              <div id="postDetails">
+                <p class="text-sm font-semibold">
+                  Post <span class="text-gray-400">● Scheduled</span>
+                </p>
+                <p id="scheduleTime" class="text-xs text-gray-500">
+                  Fri, 6 Sep • 12:15 AM
+                </p>
+              </div>
+
+              <!-- Right Section (Icons) -->
+              <div class="flex items-center space-x-3 text-gray-600">
+                <!-- Edit Date/Time Button -->
+                <button id="editSchedule" class="hover:text-black">
+                  <i class="fas fa-calendar-alt text-lg"></i>
+                </button>
+
+                <!-- Delete Button -->
+                <button id="deletePost" class="hover:text-red-600">
+                  <i class="fas fa-trash-alt text-lg"></i>
+                </button>
+              </div>
+            </div>
+          </div>
+
+          <!-- Hidden Date & Time Input -->
+          <input type="datetime-local" id="scheduleInput" class="hidden" />
+          <!-- drop-down start -->
+          <div
+            x-data="{ selected: 'Only followers', open: false }"
+            class="flex items-center justify-between px-3 p-1 mt-5 border-t border-b relative"
+          >
+            <!-- Person Icon -->
+            <i class="fas fa-users text-gray-600"></i>
+
+            <div class="relative w-full ml-2">
+              <!-- Button -->
+              <button
+                @click="open = !open"
+                class="flex justify-between items-center w-full text-gray-600"
+              >
+                <span x-text="selected" class="text-xs"></span>
+                <i class="fas fa-chevron-down"></i>
+              </button>
+
+              <!-- Dropdown Menu -->
+              <div
+                x-show="open"
+                @click.away="open = false"
+                class="absolute bottom-full left-0 w-full bg-white border border-gray-300 rounded-lg shadow-lg transition-all duration-200"
+              >
+                <ul class="py-2 text-gray-700">
+                  <li>
+                    <a
+                      href="#"
+                      @click="selected = 'Show to selected'; open = false"
+                      class="text-xs block px-4 py-2 hover:bg-gray-100"
+                    >
+                      Show to selected
+                    </a>
+                  </li>
+                  <li>
+                    <a
+                      href="#"
+                      @click="selected = 'Show except these'; open = false"
+                      class="text-xs block px-4 py-2 hover:bg-gray-100"
+                    >
+                      Show except these
+                    </a>
+                  </li>
+                  <li>
+                    <a
+                      href="#"
+                      @click="selected = 'Only followers'; open = false"
+                      class="text-xs block px-4 py-2 hover:bg-gray-100"
+                    >
+                      Only followers
+                    </a>
+                  </li>
+                </ul>
+              </div>
+            </div>
+          </div>
+
+          <div class="flex justify-between items-center px-3 mt-3 mb-3">
+            <div class="icons flex gap-3 text-center text-gray-600">
+              <div class="flex flex-col items-center">
+                <i class="fas fa-image"></i>
+                <span class="text-xs hidden md:block">Gallery</span>
+              </div>
+              <div class="flex flex-col items-center">
+                <i class="fas fa-gift"></i>
+                <span class="text-xs hidden md:block">GIF</span>
+              </div>
+              <div class="flex flex-col items-center">
+                <i class="fas fa-poll"></i>
+                <span class="text-xs hidden md:block">Polling</span>
+              </div>
+              <div class="flex flex-col items-center">
+                <i class="fas fa-map-marker-alt"></i>
+                <span class="text-xs hidden md:block">Location</span>
+              </div>
+              <div class="flex flex-col items-center">
+                <i class="fas fa-clock"></i>
+                <span class="text-xs hidden md:block">Schedule</span>
+              </div>
+              <div class="flex flex-col items-center">
+                <i class="fas fa-paper-plane"></i>
+                <span class="text-xs hidden md:block">Share to</span>
+              </div>
+            </div>
+
+            <div class="btn flex items-center justify-center px-2">
+              <button
+                data-modal="modal4"
+                class="text-xs md:text-sm w-full bg-green-500 border-2 border-green-500 text-white md:p-1 px-1 md:px-5 rounded-3xl hover:bg-white hover:text-black"
+              >
+                Confirm
+              </button>
+            </div>
+          </div>
+        </div>
+        <!-- Alpine.js (Required for Dynamic Dropdown) -->
+
+        <!-- Modal 4: Dropdown and image -->
+
+        <div
+          id="modal4"
+          class="bg-white md:w-1/3 w-full pt-4 rounded-2xl shadow-lg relative"
+        >
+          <button
+            class="absolute top-[1.2rem] left-2 text-gray-600 hover:text-black px-1 rounded-full border-[1px]"
+          >
+            <i class="fas fa-arrow-left"></i>
+          </button>
+          <h2 class="text-center text-xl font-bold">Create Post</h2>
+          <div class="flex items-center mt-4 pl-3">
+            <img
+              src="/asset/images/nav-icon-image-girl.png"
+              alt="Profile"
+              class="w-6 h-6 rounded-full object-cover"
+            />
+            <span class="font-semibold text-xs">Taylor Hill</span>
+          </div>
+          <textarea
+            class="w-full rounded-lg focus:outline-none text-xs px-5 mt-2"
+            placeholder="write a caption..."
+          ></textarea>
+          <!-- create-post-image start -->
+          <div class="div-image px-3 pl-8">
+            <div class="image">
+              <img
+                src="/asset/images/create-post-image.png"
+                alt=""
+                class="realative object-cover"
+              />
+            </div>
+
+            <div
+              class="bg-gray-500 text-white x-icon px-[6px] py-[1px] border-[1.5px] hover:bg-white hover:text-black border-gray-500 rounded-full absolute top-[135px] right-[20px]"
+            >
+              <i class="fa-solid fa-xmark"></i>
+            </div>
+          </div>
+          <!-- create-post-image end -->
+          <!-- drop-down start -->
+          <div
+            x-data="{ selected: 'Only followers', open: false }"
+            class="flex items-center justify-between px-3 p-1 mt-5 border-t border-b relative"
+          >
+            <!-- Person Icon -->
+            <i class="fas fa-users text-gray-600"></i>
+
+            <div class="relative w-full ml-2">
+              <!-- Button -->
+              <button
+                @click="open = !open"
+                class="flex justify-between items-center w-full text-gray-600"
+              >
+                <span x-text="selected" class="text-xs"></span>
+                <i class="fas fa-chevron-down"></i>
+              </button>
+
+              <!-- Dropdown Menu -->
+              <div
+                x-show="open"
+                @click.away="open = false"
+                class="absolute bottom-full left-0 w-full bg-white border border-gray-300 rounded-lg shadow-lg transition-all duration-200"
+              >
+                <ul class="py-2 text-gray-700">
+                  <li>
+                    <a
+                      href="#"
+                      @click="selected = 'Show to selected'; open = false"
+                      class="text-xs block px-4 py-2 hover:bg-gray-100"
+                    >
+                      Show to selected
+                    </a>
+                  </li>
+                  <li>
+                    <a
+                      href="#"
+                      @click="selected = 'Show except these'; open = false"
+                      class="text-xs block px-4 py-2 hover:bg-gray-100"
+                    >
+                      Show except these
+                    </a>
+                  </li>
+                  <li>
+                    <a
+                      href="#"
+                      @click="selected = 'Only followers'; open = false"
+                      class="text-xs block px-4 py-2 hover:bg-gray-100"
+                    >
+                      Only followers
+                    </a>
+                  </li>
+                </ul>
+              </div>
+            </div>
+          </div>
+
+          <div class="flex justify-between items-center px-3 mt-3 mb-3">
+            <div class="icons flex gap-3 text-center text-gray-600">
+              <div class="flex flex-col items-center">
+                <i class="fas fa-image"></i>
+                <span class="text-xs hidden md:block">Gallery</span>
+              </div>
+              <div class="flex flex-col items-center">
+                <i class="fas fa-gift"></i>
+                <span class="text-xs hidden md:block">GIF</span>
+              </div>
+              <div class="flex flex-col items-center">
+                <i class="fas fa-poll"></i>
+                <span class="text-xs hidden md:block">Polling</span>
+              </div>
+              <div class="flex flex-col items-center">
+                <i class="fas fa-map-marker-alt"></i>
+                <span class="text-xs hidden md:block">Location</span>
+              </div>
+              <div class="flex flex-col items-center">
+                <i class="fas fa-clock"></i>
+                <span class="text-xs hidden md:block">Schedule</span>
+              </div>
+              <div class="flex flex-col items-center">
+                <i class="fas fa-paper-plane"></i>
+                <span class="text-xs hidden md:block">Share to</span>
+              </div>
+            </div>
+
+            <div class="btn flex items-center justify-center">
+              <button
+                data-modal="modal5"
+                class="text-xs md:text-sm w-full bg-green-500 border-2 border-green-500 text-white md:p-1 px-1 md:px-5 rounded-3xl hover:bg-white hover:text-black"
+              >
+                Confirm
+              </button>
+            </div>
+          </div>
+        </div>
+        <!-- Alpine.js (Required for Dynamic Dropdown) -->
+
+        <!-- Modal 5: Horizontal image scroll -->
+
+        <div
+          id="modal5"
+          class="bg-white md:w-1/3 w-full pt-4 rounded-2xl shadow-lg relative"
+        >
+          <button
+            class="absolute top-[1.2rem] left-2 text-gray-600 hover:text-black px-1 rounded-full border-[1px]"
+          >
+            <i class="fas fa-arrow-left"></i>
+          </button>
+          <h2 class="text-center text-xl font-bold">Create Post</h2>
+          <div class="flex items-center mt-4 pl-3">
+            <img
+              src="/asset/images/nav-icon-image-girl.png"
+              alt="Profile"
+              class="w-6 h-6 rounded-full object-cover"
+            />
+            <span class="font-semibold text-xs">Taylor Hill</span>
+          </div>
+          <textarea
+            class="w-full rounded-lg focus:outline-none text-xs px-5 mt-2"
+            placeholder="write a caption..."
+          ></textarea>
+          <div
+            class="images flex justify-between items-center gap-2 px-3 pl-8 overflow-x-auto scrollbar-hidden"
+          >
+            <!-- create-post-image1 start -->
+            <div class="div-image w-full relative rounded-2xl">
+              <div class="image">
+                <img
+                  src="/asset/images/create-post-image.png"
+                  alt=""
+                  class="realative object-cover"
+                />
+              </div>
+
+              <div
+                class="bg-gray-500 px-1 text-white text-xs x-icon border-[1.5px] hover:bg-white hover:text-black border-gray-500 rounded-full absolute top-2 right-1"
+              >
+                <i class="fa-solid fa-xmark"></i>
+              </div>
+            </div>
+            <!-- create-post-image1 end -->
+            <!-- create-post-image2 start -->
+            <div class="div-image w-full relative rounded-full">
+              <div class="image">
+                <img
+                  src="/asset/images/create-post-image.png"
+                  alt=""
+                  class="realative object-cover"
+                />
+              </div>
+              <div
+                class="bg-gray-500 px-1 text-white text-xs x-icon border-[1.5px] hover:bg-white hover:text-black border-gray-500 rounded-full absolute top-2 right-1"
+              >
+                <i class="fa-solid fa-xmark"></i>
+              </div>
+            </div>
+            <!-- create-post-image2 end -->
+          </div>
+          <!-- drop-down start -->
+          <div
+            x-data="{ selected: 'Only followers', open: false }"
+            class="flex items-center justify-between px-3 p-1 mt-5 border-t border-b relative"
+          >
+            <!-- Person Icon -->
+            <i class="fas fa-users text-gray-600"></i>
+
+            <div class="relative w-full ml-2">
+              <!-- Button -->
+              <button
+                @click="open = !open"
+                class="flex justify-between items-center w-full text-gray-600"
+              >
+                <span x-text="selected" class="text-xs"></span>
+                <i class="fas fa-chevron-down"></i>
+              </button>
+
+              <!-- Dropdown Menu -->
+              <div
+                x-show="open"
+                @click.away="open = false"
+                class="absolute bottom-full left-0 w-full bg-white border border-gray-300 rounded-lg shadow-lg transition-all duration-200"
+              >
+                <ul class="py-2 text-gray-700">
+                  <li>
+                    <a
+                      href="#"
+                      @click="selected = 'Show to selected'; open = false"
+                      class="text-xs block px-4 py-2 hover:bg-gray-100"
+                    >
+                      Show to selected
+                    </a>
+                  </li>
+                  <li>
+                    <a
+                      href="#"
+                      @click="selected = 'Show except these'; open = false"
+                      class="text-xs block px-4 py-2 hover:bg-gray-100"
+                    >
+                      Show except these
+                    </a>
+                  </li>
+                  <li>
+                    <a
+                      href="#"
+                      @click="selected = 'Only followers'; open = false"
+                      class="text-xs block px-4 py-2 hover:bg-gray-100"
+                    >
+                      Only followers
+                    </a>
+                  </li>
+                </ul>
+              </div>
+            </div>
+          </div>
+
+          <div class="flex justify-between items-center px-3 mt-3 mb-3">
+            <div class="icons flex gap-3 text-center text-gray-600">
+              <div class="flex flex-col items-center">
+                <i class="fas fa-image"></i>
+                <span class="text-xs hidden md:block">Gallery</span>
+              </div>
+              <div class="flex flex-col items-center">
+                <i class="fas fa-gift"></i>
+                <span class="text-xs hidden md:block">GIF</span>
+              </div>
+              <div class="flex flex-col items-center">
+                <i class="fas fa-poll"></i>
+                <span class="text-xs hidden md:block">Polling</span>
+              </div>
+              <div class="flex flex-col items-center">
+                <i class="fas fa-map-marker-alt"></i>
+                <span class="text-xs hidden md:block">Location</span>
+              </div>
+              <div class="flex flex-col items-center">
+                <i class="fas fa-clock"></i>
+                <span class="text-xs hidden md:block">Schedule</span>
+              </div>
+              <div class="flex flex-col items-center">
+                <i class="fas fa-paper-plane"></i>
+                <span class="text-xs hidden md:block">Share to</span>
+              </div>
+            </div>
+
+            <div class="btn flex items-center justify-center">
+              <button
+                data-modal="modal6"
+                class="text-xs md:text-sm w-full bg-green-500 border-2 border-green-500 text-white md:p-1 px-1 md:px-5 rounded-3xl hover:bg-white hover:text-black"
+              >
+                Confirm
+              </button>
+            </div>
+          </div>
+        </div>
+
+        <!-- Modal 6: Multiple images and dropdown -->
+
+        <div
+          id="modal6"
+          class="bg-white md:w-1/2 w-full pt-4 rounded-2xl shadow-lg relative h-auto mt-5"
+        >
+          <button
+            class="absolute top-[1.2rem] left-2 text-gray-600 hover:text-black px-1 rounded-full border-[1px]"
+          >
+            <i class="fas fa-arrow-left"></i>
+          </button>
+          <h2 class="text-center text-xl font-bold">Create Post</h2>
+          <div class="flex items-center mt-4 pl-3">
+            <img
+              src="/asset/images/nav-icon-image-girl.png"
+              alt="Profile"
+              class="w-6 h-6 rounded-full object-cover"
+            />
+            <span class="font-semibold text-xs">Taylor Hill</span>
+          </div>
+          <textarea
+            class="w-full rounded-lg focus:outline-none text-xs px-5 mt-2"
+            placeholder="write a caption..."
+          ></textarea>
+          <div
+            class="images flex justify-between items-center gap-2 px-3 pl-8 overflow-x-auto scrollbar-hidden relative"
+          >
+            <!-- create-post-image1 start -->
+            <div class="div-image min-w-[48%] relative rounded-2xl">
+              <div class="image">
+                <img
+                  src="/asset/images/create-post-image.png"
+                  alt=""
+                  class="realative object-cover"
+                />
+              </div>
+
+              <div
+                class="bg-gray-500 px-1 text-white text-xs x-icon border-[1.5px] hover:bg-white hover:text-black border-gray-500 rounded-full absolute top-2 right-1"
+              >
+                <i class="fa-solid fa-xmark"></i>
+              </div>
+            </div>
+            <!-- create-post-image1 end -->
+            <!-- create-post-image2 start -->
+            <div class="div-image min-w-[48%] relative rounded-full">
+              <div class="image">
+                <img
+                  src="/asset/images/create-post-image.png"
+                  alt=""
+                  class="realative object-cover"
+                />
+              </div>
+
+              <div
+                class="bg-gray-500 px-1 text-white text-xs x-icon border-[1.5px] hover:bg-white hover:text-black border-gray-500 rounded-full absolute top-2 right-1"
+              >
+                <i class="fa-solid fa-xmark"></i>
+              </div>
+            </div>
+            <!-- create-post-image2 end -->
+            <!-- create-post-image3 start -->
+            <div class="div-image min-w-[48%] relative rounded-full">
+              <div class="image">
+                <img
+                  src="/asset/images/create-post-image.png"
+                  alt=""
+                  class="realative object-cover"
+                />
+              </div>
+
+              <div
+                class="bg-gray-500 px-1 text-white text-xs x-icon border-[1.5px] hover:bg-white hover:text-black border-gray-500 rounded-full absolute top-2 right-1"
+              >
+                <i class="fa-solid fa-xmark"></i>
+              </div>
+            </div>
+            <!-- create-post-image3 end -->
+            <div
+              class="aroow-circle-images rounded-full hover:bg-white hover:text-gray-500 bg-gray-500 text-sm text-white px-1 md:px-2 md:py-1 absolute top-[42px] right-[16px] md:top-[86px] md:right-[30px]"
+            >
+              <i class="fa-solid fa-arrow-right"></i>
+            </div>
+          </div>
+          <div class="w-full font-sans mt-2">
+            <!-- Selected Option -->
+            <button
+              class="w-full flex justify-between items-center px-4 py-3 bg-white border rounded-t-md shadow-sm"
+            >
+              <span class="flex items-center gap-2">
+                <i class="fa-solid fa-user-plus text-gray-700"></i>
+                <span>Your followers</span>
+              </span>
+              <i class="fa-solid fa-chevron-down text-gray-500"></i>
+            </button>
+
+            <!-- Dropdown -->
+            <div
+              class="w-full bg-white border-t-0 border rounded-b-md shadow-lg z-10"
+            >
+              <!-- Option 1 -->
+              <div
+                class="flex items-center justify-between px-4 py-3 hover:bg-gray-100 cursor-pointer"
+              >
+                <div class="flex items-center gap-2">
+                  <i class="fa-solid fa-user-plus text-gray-700"></i>
+                  <span>Your followers</span>
+                </div>
+                <div
+                  class="w-4 h-4 rounded-full border-2 border-green-500 flex items-center justify-center"
+                >
+                  <div class="w-2 h-2 bg-green-500 rounded-full"></div>
+                </div>
+              </div>
+
+              <!-- Option 2 -->
+              <div
+                class="flex items-center justify-between px-4 py-3 hover:bg-gray-100 cursor-pointer"
+              >
+                <div class="flex items-center gap-2">
+                  <i class="fa-solid fa-user-group text-gray-700"></i>
+                  <span>Your Faves</span>
+                </div>
+                <div class="w-4 h-4 rounded-full border border-gray-300"></div>
+              </div>
+
+              <!-- Option 3 -->
+              <div
+                class="flex items-center justify-between px-4 py-3 hover:bg-gray-100 cursor-pointer"
+              >
+                <div class="flex items-center gap-2">
+                  <i class="fa-solid fa-user text-gray-700"></i>
+                  <span>Subscribers</span>
+                </div>
+                <div class="w-4 h-4 rounded-full border border-gray-300"></div>
+              </div>
+            </div>
+            <a href="/">
+              <button
+                class="text-xs md:text-sm w-full bg-green-500 border-2 border-green-500 text-white md:p-1 px-1 md:px-5 rounded-3xl hover:bg-white hover:text-black"
+              >
+                Confirm
+              </button></a
+            >
+          </div>
+        </div>
+      </div>
+    </div>
+    <script>
+      document.addEventListener("DOMContentLoaded", function () {
+        // Hide all modals
+        function hideAllModals() {
+          for (let i = 1; i <= 6; i++) {
+            const modal = document.getElementById("modal" + i);
+            if (modal) modal.style.display = "none";
+          }
+        }
+
+        // Show specific modal
+        function showModal(id) {
+          hideAllModals();
+          const modal = document.getElementById(id);
+          if (modal) modal.style.display = "block";
+        }
+
+        // Show modal1 by default on first load
+        showModal("modal1");
+
+        // Attach modal open buttons
+        document.querySelectorAll("[data-modal]").forEach((button) => {
+          button.addEventListener("click", function () {
+            const modalId = this.getAttribute("data-modal");
+            showModal(modalId);
+          });
+        });
+
+        // Close modal on .x-icon
+        document.querySelectorAll(".x-icon").forEach((button) => {
+          button.addEventListener("click", function () {
+            const modal = this.closest("[id^='modal']");
+            if (modal) modal.style.display = "none";
+          });
+        });
+
+        // Close modal on .fa-arrow-left
+        document.querySelectorAll(".fa-arrow-left").forEach((button) => {
+          button.addEventListener("click", function () {
+            const modal = this.closest("[id^='modal']");
+            if (modal) modal.style.display = "none";
+          });
+        });
+
+        // Optional: Expose showModal globally
+        window.showModal = showModal;
+      });
+    </script>
+  </body>
+</html>

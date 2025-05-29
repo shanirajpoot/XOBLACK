@@ -1,0 +1,1115 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <!-- icons links start -->
+    <link
+      rel="stylesheet"
+      href="https://cdn.jsdelivr.net/npm/bootstrap-icons/font/bootstrap-icons.css"
+    />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css"
+      integrity="sha512-Evv84Mr4kqVGRNSgIGL/F/aIDqQb7xQ2vcrdIwxfjThSH8CSR7PBEakCr51Ck+w+/U6swU2Im1vVX0SVk9ABhg=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    />
+    <script
+      src="https://kit.fontawesome.com/YOUR_KIT_CODE.js"
+      crossorigin="anonymous"
+    ></script>
+    <!-- icons links start -->
+    <script src="https://cdn.tailwindcss.com?plugins=forms,typography,aspect-ratio,line-clamp"></script>
+    <link rel="stylesheet" href="/asset/css/style.css" />
+    <title>Xoblack social Notification page</title>
+  </head>
+  <body>
+    <!-- NAV STARTS HERE -->
+    <nav
+      class="md:sticky z-50 top-0 w-full flex flex-col md:flex-row justify-between items-center md:px-[24px] p-4 bg-white text-white md:h-20"
+    >
+      <div class="flex items-center justify-between w-full md:w-auto">
+        <img src="/asset/images/logo.png" alt="logo" class="w-20 h-10" />
+        <button class="md:hidden text-black" id="nav-toggle">
+          <i class="fa-solid fa-bars"></i>
+        </button>
+      </div>
+      <div
+        class="input w-full md:w-2/5 h-10 flex items-center mt-4 md:mt-0 relative"
+      >
+        <i
+          class="fa-solid fa-magnifying-glass absolute left-3 text-lg text-gray-400"
+        ></i>
+        <input
+          type="text"
+          placeholder="Search"
+          class="border-[1px] border-gray-300 p-2 pl-10 rounded-3xl focus:border-gray-500 w-full focus:outline-none focus:ring-0 text-gray-500"
+        />
+      </div>
+      <div
+        class="flex flex-col md:flex-row lg:items-center w-full md:w-auto mt-4 md:mt-0 hidden md:flex"
+        id="nav-content"
+      >
+        <div
+          onclick="window.location.href='create-post-main.html?openModal1=true'"
+          class="btn mb-4 md:mb-0 md:mr-4 hover:bg-white hover:text-green-500 border-green-500 border-[1px] bg-green-500 text-white px-3 py-2 rounded-3xl text-sm flex items-center transition duration-200 group"
+        >
+          <i
+            class="fa-solid fa-plus h-4 w-4 mr-2 text-white transition duration-200 group-hover:text-green-500"
+          ></i>
+          <span class="transition duration-200 group-hover:text-green-500"
+            >Create Post</span
+          >
+        </div>
+
+        <div
+          class="flex items-center border-l-[1px] border-gray-500 w-full md:w-auto h-5"
+        >
+          <img
+            class="h-9 w-9 rounded-full p-1 ml-0 md:ml-8"
+            src="/asset/images/nav-icon-image-girl.png"
+            alt=""
+          />
+          <div class="flex items-center justify-center ml-4 md:ml-0">
+            <div>
+              <h3 class="text-black font-bold text-xs">Taylor Hill</h3>
+              <p class="text-gray-700 text-xs">taylorh77</p>
+            </div>
+            <div class="relative">
+              <!-- Dropdown Button -->
+              <button id="dropdownButton" class="text-black p-2 py-2">
+                <i class="fa-solid fa-chevron-down"></i>
+              </button>
+
+              <!-- Dropdown Menu -->
+              <div
+                id="dropdownMenu"
+                class="hidden absolute left-0 mt-2 w-24 text-white rounded-md shadow-lg bg-black flex flex-col justify-center items-center overflow-hidden z-50"
+              >
+                <a
+                  href="#"
+                  class="block py-2 hover:bg-gray-700 w-[100%] flex items-center justify-center"
+                  >Option 1</a
+                >
+                <a
+                  href="#"
+                  class="block py-2 hover:bg-gray-700 w-[100%] flex items-center justify-center"
+                  >Option 2</a
+                >
+                <a
+                  href="#"
+                  class="block py-2 hover:bg-gray-700 w-[100%] flex items-center justify-center"
+                  >Option 3</a
+                >
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </nav>
+
+    <!-- NAV ENDS HERE -->
+    <!-- MAIN SECTION STARTS HERE  -->
+    <main class="md:fixed top-20 flex flex-col md:flex-row">
+      <!-- Toggle Button (Visible on Small Screens) -->
+
+      <!-- LEFT SIDE BAR STARTS HERE  -->
+
+      <!-- Sidebar for Medium and Larger Screens -->
+      <div
+        class="md:fixed top-20 left-0 w-[22.5%] overflow-y-auto scrollbar-hidden hidden md:flex md:w-[22.5%] bg-white border-t border-gray-300 h-screen p-4 flex-col"
+      >
+        <div class="flex flex-col gap-4">
+          <a
+            href="/index.html"
+            class="flex items-center gap-3 py-2 hover:bg-black hover:text-white rounded-md px-4 group"
+          >
+            <img
+              class="h-5 w-5 invert group-hover:invert-0 transition-transform duration-300"
+              src="/asset/images/home-icon.png"
+              alt="home"
+            />
+            <span class="hidden md:inline text-gray-600 group-hover:text-white"
+              >Home</span
+            >
+          </a>
+          <a
+            href="#"
+            class="flex items-center gap-3 py-2 hover:bg-black hover:text-white rounded-md px-4 group"
+          >
+            <i class="fa-solid fa-message text-gray-400"></i>
+            <span class="hidden md:inline text-gray-600 group-hover:text-white"
+              >Messages</span
+            >
+          </a>
+          <a
+            href="#"
+            class="flex items-center gap-3 py-2 hover:bg-black hover:text-white rounded-md px-4 group"
+          >
+            <img
+              class="h-5 w-5 invert"
+              src="/asset/images/Quickie.png"
+              alt="Quickies"
+            />
+            <span class="hidden md:inline text-gray-600 group-hover:text-white"
+              >Quickies</span
+            >
+          </a>
+          <a
+            href="#"
+            class="flex items-center gap-3 py-2 hover:bg-black hover:text-white rounded-md px-4 group"
+          >
+            <i
+              class="bi bi-grid-fill text-gray-400"
+              style="font-size: 24px"
+            ></i>
+            <span class="hidden md:inline text-gray-600 group-hover:text-white"
+              >HUB</span
+            >
+          </a>
+          <a
+            href="/notification.html"
+            class="flex items-center gap-3 py-2 hover:bg-black hover:text-white rounded-md px-4 group"
+          >
+            <i class="fa-solid fa-bell text-2xl text-gray-400"></i>
+            <span class="hidden md:inline text-gray-600 group-hover:text-white"
+              >Notifications</span
+            >
+          </a>
+          <a
+            href="/profile.html"
+            class="flex items-center gap-3 py-2 hover:bg-black hover:text-white rounded-md px-4 group"
+          >
+            <img
+              class="h-5 w-5"
+              src="/asset/images/nav-icon-image-girl.png"
+              alt="Profile"
+            />
+            <span class="hidden md:inline text-gray-600 group-hover:text-white"
+              >Profile</span
+            >
+          </a>
+        </div>
+
+        <!-- Others Section -->
+        <div class="mt-4 flex flex-col gap-4">
+          <p class="text-gray-500 text-xs font-bold px-4">Others</p>
+          <a
+            href="#"
+            class="flex items-center gap-3 py-2 hover:bg-black hover:text-white rounded-md px-4 group"
+          >
+            <i class="fa-solid fa-bookmark text-xl text-gray-400"></i>
+            <span class="hidden md:inline text-gray-600 group-hover:text-white"
+              >Bookmark</span
+            >
+          </a>
+          <a
+            href="#"
+            class="flex items-center gap-3 py-2 hover:bg-black hover:text-white rounded-md px-4 group"
+          >
+            <i class="fa-solid fa-gear text-xl text-gray-400"></i>
+            <span class="hidden md:inline text-gray-600 group-hover:text-white"
+              >Settings</span
+            >
+          </a>
+          <a
+            href="#"
+            class="flex items-center gap-3 py-2 hover:bg-black hover:text-white rounded-md px-4 group"
+          >
+            <i
+              class="fa-solid fa-question text-xs text-white border-gray-300 p-1 px-2 bg-gray-300 rounded"
+            ></i>
+            <span class="hidden md:inline text-gray-600 group-hover:text-white"
+              >Help</span
+            >
+          </a>
+        </div>
+        <!-- ################################ FOOTER STARTS HERE ##################### -->
+        <footer class="text-gray-400 text-center mb-20 mt-48 block lg:block">
+          <div class="flex justify-center flex-wrap text-sm mb-4 gap-2">
+            <a href="#" class="hover:text-gray-600 text-xs">About</a>
+            <span> |</span>
+            <a href="#" class="hover:text-gray-600 text-xs"
+              >Terms & Condition</a
+            >
+            <span> |</span>
+            <a href="#" class="hover:text-gray-600 text-xs">Privacy Policy</a>
+            <span> |</span>
+            <a href="#" class="hover:text-gray-600 text-xs">Contact</a>
+          </div>
+
+          <div class="flex justify-center space-x-6 mb-2">
+            <a href="#"
+              ><i
+                class="fa-brands fa-instagram text-2xl px-1 p-[2px] hover:bg-gray-800 rounded-lg"
+              ></i
+            ></a>
+            <a href="#"
+              ><i
+                class="fa-solid fa-x text-2xl px-1 p-[2px] hover:bg-gray-800 rounded-lg"
+              ></i
+            ></a>
+            <a href="#"
+              ><i
+                class="fa-brands fa-facebook text-2xl px-1 p-[2px] hover:bg-gray-800 rounded-lg"
+              ></i
+            ></a>
+            <a href="#"
+              ><i
+                class="fa-brands fa-youtube text-2xl px-1 p-[2px] hover:bg-gray-800 rounded-lg"
+              ></i
+            ></a>
+          </div>
+          <!-- DOWNLOAD APP AND PLAY STORE BUTTONS START -->
+          <div class="flex justify-center space-x-2">
+            <!-- App Store Button -->
+            <a href="https://apps.apple.com/" target="_blank">
+              <img
+                src="https://developer.apple.com/assets/elements/badges/download-on-the-app-store.svg"
+                alt="Download on the App Store"
+                class="h-10 w-auto"
+              />
+            </a>
+
+            <!-- Google Play Button -->
+            <a href="https://play.google.com/store" target="_blank">
+              <img
+                src="https://upload.wikimedia.org/wikipedia/commons/7/78/Google_Play_Store_badge_EN.svg"
+                alt="Get it on Google Play"
+                class="h-10 w-auto"
+              />
+            </a>
+          </div>
+          <!-- DOWNLOAD APP AND PLAY STORE BUTTONS END -->
+          <p class="text-[9px] mt-2">
+            &copy; 2024 XO Black. All rights reserved.
+          </p>
+        </footer>
+      </div>
+
+      <!-- Bottom Navigation for Small Screens -->
+      <div
+        class="md:hidden fixed bottom-0 left-0 right-0 bg-black p-3 flex justify-around items-center border-t border-gray-700 z-50"
+      >
+        <a href="#" class="flex flex-col items-center text-white">
+          <img class="h-6 w-6" src="/asset/images/home-icon.png" alt="Home" />
+        </a>
+        <a href="#" class="flex flex-col items-center text-white">
+          <i class="fa-solid fa-message text-xl text-gray-400"></i>
+        </a>
+
+        <a href="#" class="flex flex-col items-center text-white">
+          <i class="fa-solid fa-bell text-2xl text-gray-400"></i>
+        </a>
+
+        <a href="#" class="flex flex-col items-center text-white">
+          <i class="fa-solid fa-gear text-xl text-gray-400"></i>
+        </a>
+
+        <a href="#" class="flex flex-col items-center text-white">
+          <img
+            class="h-6 w-6"
+            src="/asset/images/nav-icon-image-girl.png"
+            alt="Profile"
+          />
+        </a>
+
+        <!-- FontAwesome for Icons -->
+        <script
+          src="https://kit.fontawesome.com/YOUR_KIT_CODE.js"
+          crossorigin="anonymous"
+        ></script>
+
+        <!-- ################################ FOOTER ENDS HERE ##################### -->
+        <!-- ########## LEFT ENDS START ######## -->
+      </div>
+      <!-- LEFT SIDE BAR ENDS HERE  -->
+
+      <!--  MIDDLE SECTION STARTS HERE  -->
+      <div
+        class="md-sec-main flex-1 md:ml-[22.5%] md:mr-[28.5%] w-full md:w-[49%] bg-white border-[1px] border-gray-300 h-screen flex flex-col items-center overflow-y-auto scrollbar-hidden"
+      >
+        <!-- LINKS DIV STARTS HERE  -->
+        <div
+          class="flex items-center justify-center h-auto w-full border-b border-gray-300"
+        >
+          <div
+            class="w-full max-w-screen-lg overflow-x-auto scrollbar-hide md:mt-3 md:mb-3 flex items-center justify-center"
+          >
+            <div
+              class="flex items-center overflow-x-auto scrollbar-hide max-h-64 justify-evenly my-2 h-[60%] md:w-[80%] border bg-gray-100 border-gray-300 rounded-full gap-[1px] py-2"
+            >
+              <a
+                href="#"
+                class="font-semibold text-gray-500 py-2 px-3 hover:bg-white hover:text-black rounded-full transition duration-300 whitespace-nowrap"
+              >
+                All
+              </a>
+              <a
+                href="#"
+                class="font-semibold text-gray-500 py-2 px-3 hover:bg-white hover:text-black rounded-full transition duration-300 whitespace-nowrap"
+              >
+                Social App
+              </a>
+              <a
+                href="#"
+                class="font-semibold text-gray-500 py-2 px-3 hover:bg-white hover:text-black rounded-full transition duration-300 whitespace-nowrap"
+              >
+                Deals App
+              </a>
+              <a
+                href="#"
+                class="font-semibold text-gray-500 py-2 px-3 hover:bg-white hover:text-black rounded-full transition duration-300 whitespace-nowrap"
+              >
+                News App
+              </a>
+            </div>
+          </div>
+        </div>
+        <!-- LINKS DIV ENDS HERE  -->
+        <!-- @@@@@@@@@@@@@@@@@@@@@ Middle SECTION STARTS HERE @@@@@@@@@@@@@@@@@@@@@@@@@@@@ -->
+        <div
+          class="flex flex-col items-center mt-4 w-[90%] border-t-[1px] mb-5"
+        >
+          <!-- FIRST SECTION STARTS HERE -->
+          <div class="sec-1 w-full mt-3">
+            <div class="flex justify-between items-end w-full mt-3">
+              <div class="flex flex-col">
+                <h1 class="font-semibold">Notification</h1>
+                <div class="flex justify-start items-center gap-1 mt-3">
+                  <img
+                    src="/asset/images/girl-image-right-f.png"
+                    class="w-8 h-8 rounded-full"
+                  />
+                  <h2>lisadoe74</h2>
+                  <p class="text-xl text-black">♠</p>
+                  <p class="text-xs md:text-sm">liked your post</p>
+                </div>
+              </div>
+              <div class="flex items-end">
+                <h2 class="text-gray-300 text-xs md:text-sm mb-2">1 day ago</h2>
+              </div>
+            </div>
+
+            <div class="sec1-image flex justify-end mt-2">
+              <img
+                src="/asset/images/first-main secntion image.png"
+                class="rounded-xl md:h-[350px] md:h-[400px] w-[95%] object-cover"
+                alt=""
+              />
+            </div>
+
+            <div
+              class="flex items-center justify-end w-full overflow-x-auto scrollbar-hide"
+            >
+              <div
+                class="flex items-center justify-between space-x-3 w-[95%] mt-2 mb-3"
+              >
+                <div class="flex space-x-3">
+                  <!-- Like Button 1 -->
+                  <div
+                    class="likeButton flex items-center space-x-1 bg-gray-50 px-4 py-2 rounded-full shadow-sm hover:bg-gray-200 transition duration-300 cursor-pointer"
+                  >
+                    <i class="fa-solid fa-heart text-gray-500"></i>
+                    <span class="likeCount text-gray-500 text-sm font-medium"
+                      >123</span
+                    >
+                  </div>
+                  <!-- Repost Button -->
+                  <div
+                    class="repostButton flex items-center space-x-1 bg-gray-50 px-4 py-2 rounded-full shadow-sm hover:bg-gray-200 transition duration-300 cursor-pointer"
+                  >
+                    <i class="fa-solid fa-repeat text-gray-500"></i>
+                    <span class="repostCount text-gray-500 text-sm font-medium"
+                      >999</span
+                    >
+                  </div>
+                  <!-- Share Button 3 -->
+                  <div
+                    class="shareButton flex items-center space-x-1 bg-gray-50 px-4 py-2 rounded-full shadow-sm hover:bg-gray-200 transition duration-300 cursor-pointer"
+                  >
+                    <i
+                      class="fa-solid fa-square-arrow-up-right text-gray-500"
+                    ></i>
+                    <span class="shareCount text-gray-500 text-sm font-medium"
+                      >999</span
+                    >
+                  </div>
+                </div>
+                <div class="save">
+                  <!-- Save Button 3 -->
+                  <div
+                    class="saveButton flex items-center bg-gray-50 px-4 py-2 mb-2 rounded-full shadow-sm hover:bg-gray-200 transition duration-300 cursor-pointer"
+                  >
+                    <i class="fa-solid fa-bookmark text-gray-500"></i>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+          <!-- FIRST SECTION ENDS HERE -->
+          <!-- SECOND SECTION STARTS HERE -->
+          <section class="sec2 w-full mt-3 mb-3 border-t-[1px] pt-3">
+            <div class="flex space-x-2 items-center">
+              <div class="icon rounded-full">
+                <img
+                  src="/asset/images/person-icon check.png"
+                  alt=""
+                  class="rounded-full h-7 w-7"
+                />
+              </div>
+              <div class="icon-image1 rounded-full">
+                <img
+                  src="/asset/images/girl-image-right-f.png"
+                  alt=""
+                  class="rounded-full h-7 w-7"
+                />
+              </div>
+              <div class="icon-image2 rounded-full">
+                <img
+                  src="/asset/images/imageicon-boy-centersection.png"
+                  alt=""
+                  class="rounded-full h-7 w-7"
+                />
+              </div>
+            </div>
+            <div class="t-headings flex items-center justify-end w-full">
+              <div
+                class="flex justify-between items-center w-[100%] md:w-[95%]"
+              >
+                <div class="heading-profile-names flex items-center gap-1">
+                  <p class="md:text-sm text-[9px]">
+                    <span class="text-[8px] md:text-sm font-bold"
+                      >lisadoe74</span
+                    >
+                    <span class="text-[9px] md:text-xl text-bold">♠</span> and
+                    <span class="text-[8px] md:text-sm font-bold"
+                      >wahyundr_
+                    </span>
+                    connections you
+                  </p>
+                </div>
+                <div class="time-ago">
+                  <p class="text-gray-300 text-xs whitespace-nowrap">
+                    1 day ago
+                  </p>
+                </div>
+              </div>
+            </div>
+          </section>
+          <!-- SECOND SECTION ENDS HERE -->
+          <!-- THIRD SECTION STARTS HERE -->
+          <section class="sec2 w-full mt-3 mb-3 border-t-[1px] pt-3">
+            <div class="flex space-x-2 items-center">
+              <div class="icon rounded-full">
+                <i class="fa-solid fa-heart text-2xl text-red-500"></i>
+              </div>
+              <div class="icon-image1 rounded-full">
+                <img
+                  src="/asset/images/girl-image-right-f.png"
+                  alt=""
+                  class="rounded-full h-7 w-7"
+                />
+              </div>
+              <div class="icon-image2 rounded-full">
+                <img
+                  src="/asset/images/imageicon-boy-centersection.png"
+                  alt=""
+                  class="rounded-full h-7 w-7"
+                />
+              </div>
+            </div>
+            <div class="t-headings flex items-center justify-end w-full">
+              <div
+                class="flex justify-between items-center w-[100%] md:w-[95%]"
+              >
+                <div class="heading-profile-names flex items-center gap-1">
+                  <p class="md:text-sm text-[9px]">
+                    <span class="text-[8px] md:text-sm font-bold"
+                      >lisadoe74</span
+                    >
+                    <span class="text-[9px] md:text-xl text-bold">♠</span> and
+                    <span class="text-[8px] md:text-sm font-bold"
+                      >wahyundr_
+                    </span>
+                    connections you
+                  </p>
+                </div>
+                <div class="time-ago">
+                  <p class="text-gray-300 text-xs whitespace-nowrap">
+                    1 day ago
+                  </p>
+                </div>
+              </div>
+            </div>
+            <div class="text flex items-center justify-end w-full">
+              <div class="flex items-center w-[100%] md:w-[95%]">
+                <p class="text-gray-500 text-xs md:text-sm">
+                  Just hit 3,000+ followers on X! Thanks for being here and
+                  letting me share my work with you.
+                </p>
+              </div>
+            </div>
+          </section>
+          <!-- THIRD SECTION ENDS HERE -->
+          <!-- FOURTH SECTION STARTS HERE -->
+          <section class="sec2 w-full mt-3 mb-3 border-t-[1px] pt-3">
+            <div class="flex space-x-2 items-center">
+              <div class="icon rounded-full">
+                <i class="fa-solid fa-repeat text-2xl"></i>
+              </div>
+              <div class="icon-image1 rounded-full">
+                <img
+                  src="/asset/images/girl-image-right-f.png"
+                  alt=""
+                  class="rounded-full h-7 w-7"
+                />
+              </div>
+              <div class="icon-image2 rounded-full">
+                <img
+                  src="/asset/images/imageicon-boy-centersection.png"
+                  alt=""
+                  class="rounded-full h-7 w-7"
+                />
+              </div>
+            </div>
+            <div class="t-headings flex items-center justify-end w-full">
+              <div
+                class="flex justify-between items-center w-[100%] md:w-[95%]"
+              >
+                <div class="heading-profile-names flex items-center gap-1">
+                  <p class="md:text-sm text-[9px]">
+                    <span class="text-[8px] md:text-sm font-bold"
+                      >lisadoe74</span
+                    >
+                    <span class="text-[9px] md:text-xl text-bold">♠</span> and
+                    <span class="text-[8px] md:text-sm font-bold"
+                      >wahyundr_
+                    </span>
+                    connections you
+                  </p>
+                </div>
+                <div class="time-ago">
+                  <p class="text-gray-300 text-xs whitespace-nowrap">
+                    1 day ago
+                  </p>
+                </div>
+              </div>
+            </div>
+          </section>
+          <!-- FOURTH SECTION ENDS HERE -->
+          <!-- ######################### fifth CONNECTIONS SECTION STARTS HERE ####################### -->
+          <div
+            class="sec-5 w-[100%] mx-auto border-b-[1px] border-t-[1px] border-gray-300 mt-3 p-4"
+          >
+            <!-- Header -->
+            <div class="flex justify-between items-center mb-5 mt-2">
+              <h2 class="text-lg font-semibold mb-3">Suggestion for you</h2>
+              <a href="#" class="text-sm text-gray-500 hover:underline mb-3"
+                >See all</a
+              >
+            </div>
+
+            <!-- Card Container -->
+            <div class="grid grid-cols-1 sm:grid-cols-3 md:grid-cols-3 gap-4">
+              <!-- Card 1 -->
+              <div
+                class="relative w-full h-50 rounded-2xl overflow-hidden shadow-lg"
+              >
+                <!-- Profile Image -->
+                <img
+                  src="/asset/images/justin-drew-card-image.png"
+                  alt="Profile"
+                  class="w-full h-full object-cover"
+                />
+
+                <!-- User Details (Absolute Position) -->
+                <div class="absolute bottom-2 left-1 w-full text-white px-3">
+                  <h3 class="text-xs font-semibold">Justin Drew</h3>
+                  <div
+                    class="flex items-center space-x-2 text-gray-300 text-xs"
+                  >
+                    <img
+                      src="/asset/images/justin-drew.png"
+                      class="w-6 h-6 rounded-full border border-white"
+                    />
+                    <span class="text-xs">justin_drew</span>
+                  </div>
+                  <button
+                    class="mt-2 w-full bg-white text-black rounded-full py-1 text-xs font-medium hover:bg-black hover:text-white"
+                  >
+                    Connect
+                  </button>
+                </div>
+              </div>
+
+              <!-- Card 2 -->
+              <div
+                class="relative w-full h-58 rounded-2xl overflow-hidden shadow-lg"
+              >
+                <!-- Profile Image -->
+                <img
+                  src="/asset/images/john doe-card-image.png"
+                  alt="Profile"
+                  class="w-full h-full object-cover"
+                />
+
+                <!-- User Details (Absolute Position) -->
+                <div class="absolute bottom-2 left-1 text-white px-3 w-full">
+                  <h3 class="text-xs font-semibold">JOhn Doe</h3>
+                  <div
+                    class="flex items-center space-x-2 text-gray-300 text-xs"
+                  >
+                    <img
+                      src="/asset/images/john-doe.png"
+                      class="w-6 h-6 rounded-full border border-white"
+                    />
+                    <span class="text-xs">John Doe</span>
+                  </div>
+                  <button
+                    class="mt-2 w-full bg-white text-black rounded-full text-xs py-1 text-xs font-medium hover:bg-black hover:text-white"
+                  >
+                    Connection Sent
+                  </button>
+                </div>
+              </div>
+
+              <!-- Card 3 -->
+              <div
+                class="relative w-full h-58 rounded-2xl overflow-hidden shadow-lg"
+              >
+                <!-- Profile Image -->
+                <img
+                  src="/asset/images/mary-card-image.png"
+                  alt="Profile"
+                  class="w-full h-full object-cover"
+                />
+
+                <!-- User Details (Absolute Position) -->
+                <div class="absolute bottom-2 left-1 text-white w-full px-3">
+                  <h3 class="text-sm font-semibold">Mary Sam</h3>
+                  <div
+                    class="flex items-center space-x-2 text-gray-300 text-xs"
+                  >
+                    <img
+                      src="/asset/images/mary-sam.png"
+                      class="w-6 h-6 rounded-full border border-white"
+                    />
+                    <span>mary-sam</span>
+                  </div>
+                  <button
+                    class="mt-2 w-full bg-white text-black rounded-full py-1 text-xs font-medium hover:bg-black hover:text-white"
+                  >
+                    Connect
+                  </button>
+                </div>
+              </div>
+            </div>
+          </div>
+          <!-- fifth CONNECTIONS SECTION ENDS HERE -->
+          <!-- sixth SECTION STARTS HERE -->
+          <section class="sec-6 w-full mt-3 mb-3 border-t-[1px] pt-3">
+            <div class="flex justify-between items-center">
+              <div class="flex justify-start items-center gap-1">
+                <img
+                  src="/asset/images/girl-image-right-f.png"
+                  class="w-8 h-8 rounded-full"
+                />
+                <h2 class="md:test-xs profile-name-notification font-semibold">
+                  lisaNurlina
+                </h2>
+                <p class="text-xl text-black">♠</p>
+                <p><a class="text-xs md:text-sm" href="#">@lisadoe74</a></p>
+              </div>
+              <div class="time flex items-center">
+                <p class="text-[9px] md:text-sm text-gray-400">1 day ago</p>
+              </div>
+            </div>
+            <div class="w-full flex flex-col justify-end items-center mt-3">
+              <div class="w-[95%] border-l-[1px] border-gray-400 py-1 px-2">
+                <p class="text-xs">
+                  Reply <a class="text-blue-400" href="#">@lisadoe74</a>
+                  <a class="text-blue-400" href="#">@wahyundr_</a> and
+                  <a class="text-blue-400" href="#">@alexprnm_</a>
+                </p>
+                <p class="text-xs mt-1">
+                  Just hit 3,000+ followers on X! Thanks for being here and
+                  letting me share my work with you.
+                </p>
+              </div>
+              <div class="image w-[95%]">
+                <img
+                  class="h-[120px] w-[120px] rounded-2xl object-cover"
+                  src="/asset/images/sec6-image.png"
+                  alt=""
+                />
+              </div>
+            </div>
+          </section>
+          <!-- sixth SECTION ENDS HERE -->
+          <!-- SEVENTH SECTION STARTS HERE -->
+          <section class="sec-7 w-full mt-3 mb-2 border-t-[1px] pt-3">
+            <div class="flex justify-between items-center">
+              <div class="flex justify-start items-center gap-1">
+                <img
+                  src="/asset/images/girl-image-right-f.png"
+                  class="w-8 h-8 rounded-full"
+                />
+                <h2 class="md:test-xs profile-name-notification font-semibold">
+                  lisaNurlina
+                </h2>
+                <p class="text-xl text-black">♠</p>
+                <p><a class="text-xs md:text-sm" href="#">@lisadoe74</a></p>
+              </div>
+
+              <div class="time flex items-center">
+                <p class="text-[9px] md:text-sm text-gray-400">2 day ago</p>
+              </div>
+            </div>
+            <div class="w-[95%] py-1 px-2">
+              <p class="text-xs">
+                Thanks to and
+                <a class="text-blue-400" href="#">@alexbizer</a> and
+                <a class="text-blue-400" href="#">@yonalim_</a>
+                for taking me on vacation
+              </p>
+            </div>
+            <!-- sec7-image -->
+            <div class="sec7-image flex justify-end mt-2">
+              <img
+                src="/asset/images/first-main secntion image.png"
+                class="rounded-xl md:h-[350px] md:h-[400px] w-[95%] object-cover"
+                alt=""
+              />
+            </div>
+            <!-- sec7-likes-buttons -->
+            <div
+              class="flex items-center justify-end w-full overflow-x-auto scrollbar-hide"
+            >
+              <div
+                class="flex items-center justify-between space-x-3 w-[95%] mt-2 mb-3"
+              >
+                <div class="flex space-x-3">
+                  <!-- Like Button 1 -->
+                  <div
+                    class="likeButton flex items-center space-x-1 bg-gray-50 px-4 py-2 rounded-full shadow-sm hover:bg-gray-200 transition duration-300 cursor-pointer"
+                  >
+                    <i class="fa-solid fa-heart text-gray-500"></i>
+                    <span class="likeCount text-gray-500 text-sm font-medium"
+                      >123</span
+                    >
+                  </div>
+                  <!-- Repost Button -->
+                  <div
+                    class="repostButton flex items-center space-x-1 bg-gray-50 px-4 py-2 rounded-full shadow-sm hover:bg-gray-200 transition duration-300 cursor-pointer"
+                  >
+                    <i class="fa-solid fa-repeat text-gray-500"></i>
+                    <span class="repostCount text-gray-500 text-sm font-medium"
+                      >999</span
+                    >
+                  </div>
+                  <!-- Share Button 3 -->
+                  <div
+                    class="shareButton flex items-center space-x-1 bg-gray-50 px-4 py-2 rounded-full shadow-sm hover:bg-gray-200 transition duration-300 cursor-pointer"
+                  >
+                    <i
+                      class="fa-solid fa-square-arrow-up-right text-gray-500"
+                    ></i>
+                    <span class="shareCount text-gray-500 text-sm font-medium"
+                      >999</span
+                    >
+                  </div>
+                </div>
+                <!-- Save Button 3 -->
+                <div
+                  class="saveButton flex items-center bg-gray-50 px-4 py-2 mb-2 rounded-full shadow-sm hover:bg-gray-200 transition duration-300 cursor-pointer"
+                >
+                  <i class="fa-solid fa-bookmark text-gray-500"></i>
+                </div>
+              </div>
+            </div>
+          </section>
+          <!-- SEVENTH SECTION ENDS HERE -->
+          <!-- EIGHTTH SECTION STARTS HERE -->
+          <section class="sec-8 w-full mt-3 mb-16 h-auto border-t-[1px] pt-3">
+            <div class="flex justify-between items-center">
+              <div class="flex justify-start items-center gap-1">
+                <img
+                  src="/asset/images/rtab-right-image-boy-icon.png"
+                  class="w-8 h-8 rounded-full"
+                />
+                <h2 class="md:test-xs profile-name-notification font-semibold">
+                  Andreas Stella
+                </h2>
+                <p class="text-xl text-black">♠</p>
+                <p><a class="text-xs md:text-sm" href="#">@lisadoe74</a></p>
+              </div>
+
+              <div class="time flex items-center">
+                <p class="text-[9px] md:text-sm text-gray-400">2 day ago</p>
+              </div>
+            </div>
+            <div class="w-[95%] py-1 px-2">
+              <p class="text-xs flex whitespace-nowrap flex-wrap">
+                What an exciting race, who will win?
+                <span><a class="text-blue-400" href="#">@alexbizer</a></span>
+                <span class="flex items-center"
+                  >#USAGP
+                  <img
+                    src="/asset/images/Flag-United-States-of-America.webp"
+                    alt=""
+                    class="h-2 w-3"
+                /></span>
+                <span class="p">#F1</span>
+              </p>
+            </div>
+            <!-- sec8-image -->
+            <div class="sec7-image flex justify-end mt-2">
+              <img
+                src="/asset/images/first-main secntion image.png"
+                class="rounded-xl md:h-[350px] md:h-[400px] w-[95%] object-cover"
+                alt=""
+              />
+            </div>
+            <!-- sec8-likes-buttons -->
+            <div
+              class="flex items-center justify-end w-full overflow-x-auto scrollbar-hide"
+            >
+              <div
+                class="flex items-center justify-between space-x-3 w-[95%] mt-2 mb-3"
+              >
+                <div class="flex space-x-3">
+                  <!-- Like Button 1 -->
+                  <div
+                    class="likeButton flex items-center space-x-1 bg-gray-50 px-4 py-2 rounded-full shadow-sm hover:bg-gray-200 transition duration-300 cursor-pointer"
+                  >
+                    <i class="fa-solid fa-heart text-gray-500"></i>
+                    <span class="likeCount text-gray-500 text-sm font-medium"
+                      >123</span
+                    >
+                  </div>
+                  <!-- Repost Button -->
+                  <div
+                    class="repostButton flex items-center space-x-1 bg-gray-50 px-4 py-2 rounded-full shadow-sm hover:bg-gray-200 transition duration-300 cursor-pointer"
+                  >
+                    <i class="fa-solid fa-repeat text-gray-500"></i>
+                    <span class="repostCount text-gray-500 text-sm font-medium"
+                      >999</span
+                    >
+                  </div>
+                  <!-- Share Button 3 -->
+                  <div
+                    class="shareButton flex items-center space-x-1 bg-gray-50 px-4 py-2 rounded-full shadow-sm hover:bg-gray-200 transition duration-300 cursor-pointer"
+                  >
+                    <i
+                      class="fa-solid fa-square-arrow-up-right text-gray-500"
+                    ></i>
+                    <span class="shareCount text-gray-500 text-sm font-medium"
+                      >999</span
+                    >
+                  </div>
+                </div>
+                <div class="save">
+                  <!-- Save Button 3 -->
+                  <div
+                    class="saveButton flex items-center bg-gray-50 px-4 py-2 mb-2 rounded-full shadow-sm hover:bg-gray-200 transition duration-300 cursor-pointer"
+                  >
+                    <i class="fa-solid fa-bookmark text-gray-500"></i>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </section>
+          <!-- EIGHTTH  SECTION ENDS HERE -->
+        </div>
+        <!-- Middle SECTION ENDS HERE  -->
+      </div>
+      <!-- ########################## MIDDLE SECTION ENDS HERE ############################### -->
+      <!-- ####################### RIGHT BAR STARTS HERE ############################### -->
+      <div
+        class="md:fixed top-20 right-0 h-full w-[28.5%] overflow-y-auto scrollbar-hidden hidden md:block w-full md:w-[28.5%] bg-white border-t-[1px] border-gray-300 p-4 h-screen"
+      >
+        <!-- Flex from Friends Section -->
+        <div class="bg-white p-4 rounded-lg shadow-sm">
+          <div class="flex justify-between items-center mb-4">
+            <h2 class="text-lg font-semibold">Flex from friends</h2>
+            <a href="#" class="text-green-600 font-medium">See more</a>
+          </div>
+
+          <!-- Friend Cards -->
+          <div class="grid grid-cols-2 gap-3">
+            <!-- Friend 1 -->
+            <div class="relative">
+              <img
+                src="/asset/images/right-tab-left-image.png"
+                alt="Friend 1"
+                class="rounded-xl w-full h-45 object-cover"
+              />
+              <div
+                class="absolute top-2 left-2 rounded-full p-[1px] border-2 border-orange-500"
+              >
+                <div class="relative">
+                  <img
+                    src="/asset/images/girl-image-right-f.png"
+                    class="w-8 h-8 rounded-full"
+                  />
+                  <div class="absolute bottom-0 right-0">
+                    <img
+                      src="/asset/images/green star.png"
+                      class="h-3 w-3"
+                      alt=""
+                    />
+                  </div>
+                </div>
+              </div>
+              <div class="absolute bottom-2 left-2">
+                <p class="mt-2 text-sm text-white font-medium">dianamewing</p>
+              </div>
+            </div>
+
+            <!-- Friend 2 -->
+            <div class="relative">
+              <img
+                src="/asset/images/rtab-right-image.png"
+                alt="Friend 2"
+                class="rounded-xl w-full h-45 object-cover"
+              />
+              <div
+                class="absolute top-2 left-2 rounded-full p-[1px] border-2 border-orange-500"
+              >
+                <img
+                  src="/asset/images/rtab-right-image-boy-icon.png"
+                  class="w-8 h-8 rounded-full"
+                />
+              </div>
+              <div class="absolute bottom-2 left-2">
+                <p class="mt-2 text-sm text-white font-medium">alexjohn</p>
+              </div>
+            </div>
+          </div>
+        </div>
+        <!-- Subscription Card -->
+        <div
+          class="bg-gray-900 text-white p-4 rounded-xl mt-6 flex justify-between bg-custom-yohop bg-cover bg-center"
+        >
+          <div class="flex flex-col">
+            <div class="flex flex-col">
+              <div
+                class="flex items-center justify-center rounded-full bg-green-500 w-10 h-10 mb-2"
+              >
+                <img
+                  src="/asset/images/Icon-crown-righttab.png"
+                  class="h-5 w-5"
+                  alt=""
+                />
+              </div>
+              <h3 class="text-lg font-semibold mb-1">
+                Subscribed to Yohop Plus
+              </h3>
+              <p class="text-sm text-gray-300 mb-2">Renews on 5 Nov 2024</p>
+            </div>
+          </div>
+          <div class="flex items-center justify-center mt-4">
+            <div
+              class="bg-green-500 text-white rounded-full flex items-center justify-center w-10 h-10"
+            >
+              <i class="fa-solid fa-arrow-right"></i>
+            </div>
+          </div>
+        </div>
+      </div>
+      <!--  RIGHT BAR ENDS HERE  -->
+    </main>
+
+    <!-- MAIN SECTION ENDS HERE  -->
+
+    <!-- JS LINKS HERE -->
+    <!--
+    @@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@ -->
+
+    <script>
+      // ########################### Xoblack like button js ####################################
+      document.querySelectorAll(".likeButton").forEach((button) => {
+        button.addEventListener("click", function () {
+          const icon = this.querySelector("i");
+          const countSpan = this.querySelector(".likeCount");
+          let count = parseInt(countSpan.innerText);
+
+          if (icon.classList.contains("text-gray-500")) {
+            // Like: Change to red and increase count
+            icon.classList.remove("text-gray-500");
+            icon.classList.add("text-red-500");
+            count++;
+          } else {
+            // Unlike: Change back to gray and decrease count
+            icon.classList.remove("text-red-500");
+            icon.classList.add("text-gray-500");
+            count--;
+          }
+
+          countSpan.innerText = count; // Update the count in UI
+        });
+      });
+      // ########################### Xoblack repost button js ####################################
+      document.querySelectorAll(".repostButton").forEach((button) => {
+        button.addEventListener("click", function () {
+          const icon = this.querySelector("i");
+          const countSpan = this.querySelector(".repostCount");
+          let count = parseInt(countSpan.innerText);
+
+          if (icon.classList.contains("text-gray-500")) {
+            // Change icon color to green and rotate
+            icon.classList.remove("text-gray-500");
+            icon.classList.add("text-green-500");
+            icon.classList.add("rotate-animation");
+            count++; // Increase count
+          } else {
+            // Reset back to gray and remove rotation
+            icon.classList.remove("text-green-500");
+            icon.classList.add("text-gray-500");
+            icon.classList.remove("rotate-animation");
+            void icon.offsetWidth; // Reset animation
+            count--; // Decrease count
+          }
+
+          countSpan.innerText = count; // Update count in UI
+        });
+      });
+      // ########################### Xoblack repost button js ####################################
+      document.querySelectorAll(".shareButton").forEach((button) => {
+        button.addEventListener("click", function () {
+          const icon = this.querySelector("i");
+          const countSpan = this.querySelector(".shareCount");
+          let count = parseInt(countSpan.innerText);
+
+          // Simulate a share action
+          alert("Shared successfully! 📤"); // You can replace this with actual sharing logic
+
+          // Change color to blue and increase count
+          icon.classList.remove("text-gray-500");
+          icon.classList.add("text-blue-500");
+          count++;
+
+          countSpan.innerText = count; // Update count in UI
+        });
+      });
+      // ########################### Xoblack repost button js ####################################
+      document.querySelectorAll(".saveButton").forEach((button) => {
+        button.addEventListener("click", function () {
+          const icon = this.querySelector("i");
+
+          if (icon.classList.contains("fa-bookmark")) {
+            // Change to saved state (filled bookmark, blue color)
+            icon.classList.remove("fa-bookmark");
+            icon.classList.add("fa-solid", "fa-bookmark", "text-blue-500");
+          } else {
+            // Change back to unsaved state (default bookmark)
+            icon.classList.remove("text-blue-500");
+            icon.classList.add("fa-bookmark");
+          }
+        });
+      });
+    </script>
+  </body>
+</html>
